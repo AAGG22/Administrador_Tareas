@@ -10,6 +10,6 @@ class Home extends Controller
         $data['title'] = 'Inicio';
         $data['cabecera'] = view('templates/cabecera');
         $data['footer'] = view('templates/footer');
-        return view('Auth/login', $data);
+        return view('auth/login', $data);
     }
 }

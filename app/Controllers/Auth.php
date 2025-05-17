@@ -9,8 +9,8 @@ class Auth extends Controller
     {
         log_message('debug', 'Accediendo a Auth::login');
         if (session()->get('user_id')) {
-            log_message('debug', 'Usuario ya logueado, redirigiendo a profile');
-            return redirect()->to('profile');
+            log_message('debug', 'Usuario ya logueado, redirigiendo al Panel de tareas');
+            return redirect()->to('tasks');
         }
         $data['title'] = 'Iniciar Sesión';
         $data['cabecera'] = view('templates/cabecera');
@@ -60,9 +60,9 @@ class Auth extends Controller
             'logged_in' => true
         ]);
         log_message('debug', 'Inicio de sesión exitoso para: ' . $correo);
-        log_message('debug', 'Redirigiendo a: profile (URL completa: ' . site_url('profile') . ')');
+        log_message('debug', 'Redirigiendo a: Panel de Tareas (URL completa: ' . site_url('tasks') . ')');
         session()->setFlashdata('exito', 'Bienvenido, ' . $user['correo'] . '!');
-        return redirect()->to('profile');
+        return redirect()->to('tasks');
     }
 
     public function logout()

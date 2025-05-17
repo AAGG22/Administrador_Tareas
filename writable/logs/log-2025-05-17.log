@@ -71,3 +71,249 @@ in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 DEBUG - 2025-05-17 16:16:15 --> Accediendo a Home::index
 DEBUG - 2025-05-17 16:16:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 16:40:08 --> Accediendo a Home::index
+DEBUG - 2025-05-17 16:40:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 16:41:48 --> Accediendo a Home::index
+DEBUG - 2025-05-17 16:41:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 16:42:12 --> Accediendo a Home::index
+DEBUG - 2025-05-17 16:42:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 16:42:16 --> Accediendo a Auth::logout
+DEBUG - 2025-05-17 16:42:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 16:42:16 --> Accediendo a Auth::login
+DEBUG - 2025-05-17 16:42:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 16:42:55 --> Accediendo a Auth::login
+DEBUG - 2025-05-17 16:42:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 16:43:03 --> Accediendo a SignupController::index
+DEBUG - 2025-05-17 16:43:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 16:43:06 --> Accediendo a Auth::login
+DEBUG - 2025-05-17 16:43:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 16:43:16 --> Accediendo a Auth::attemptLogin
+DEBUG - 2025-05-17 16:43:16 --> Datos recibidos: correo=999@999.com, password=provided
+DEBUG - 2025-05-17 16:43:16 --> Resultado de la consulta: user={"id":"1","nombre":"999","apellido":"999","correo":"999@999.com","contrasena":"$2y$10$wGnsPspK2bUR5myNL8Ov6efoU9Q3RZR4KxLg\/pZK0Ce8xJtpgIcge","fecha_creacion":"2025-05-13 16:10:27"}
+DEBUG - 2025-05-17 16:43:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 16:43:16 --> Inicio de sesión exitoso para: 999@999.com
+DEBUG - 2025-05-17 16:43:16 --> Redirigiendo a: profile (URL completa: http://localhost/framework-ci4/index.php/profile)
+DEBUG - 2025-05-17 16:43:16 --> Accediendo a UserController::profile
+DEBUG - 2025-05-17 16:43:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 16:43:29 --> Accediendo a Tasks::index
+DEBUG - 2025-05-17 16:43:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 16:43:29 --> User ID en sesión: 1
+DEBUG - 2025-05-17 16:43:29 --> Correo logueado: 999@999.com
+DEBUG - 2025-05-17 16:43:30 --> Tareas propias encontradas: 0
+DEBUG - 2025-05-17 16:43:30 --> Correo en sesión: 999@999.com
+DEBUG - 2025-05-17 16:43:30 --> Tareas compartidas encontradas: 1
+DEBUG - 2025-05-17 16:43:30 --> Total de tareas combinadas: 1
+DEBUG - 2025-05-17 18:27:18 --> Accediendo a Tasks::index
+DEBUG - 2025-05-17 18:27:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 18:27:18 --> User ID en sesión: 1
+DEBUG - 2025-05-17 18:27:18 --> Correo logueado: 999@999.com
+DEBUG - 2025-05-17 18:27:18 --> Tareas propias encontradas: 0
+DEBUG - 2025-05-17 18:27:18 --> Correo en sesión: 999@999.com
+DEBUG - 2025-05-17 18:27:18 --> Tareas compartidas encontradas: 1
+DEBUG - 2025-05-17 18:27:19 --> Total de tareas combinadas: 1
+DEBUG - 2025-05-17 18:27:21 --> Accediendo a Auth::logout
+DEBUG - 2025-05-17 18:27:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 18:27:21 --> Accediendo a Auth::login
+DEBUG - 2025-05-17 18:27:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 18:27:40 --> Accediendo a Auth::attemptLogin
+DEBUG - 2025-05-17 18:27:40 --> Datos recibidos: correo=alf@alf.com, password=provided
+DEBUG - 2025-05-17 18:27:40 --> Resultado de la consulta: user=null
+ERROR - 2025-05-17 18:27:40 --> Usuario no encontrado: alf@alf.com
+DEBUG - 2025-05-17 18:27:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 18:27:40 --> Accediendo a Auth::login
+DEBUG - 2025-05-17 18:27:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 18:27:53 --> Accediendo a Auth::attemptLogin
+DEBUG - 2025-05-17 18:27:53 --> Datos recibidos: correo=alf@alf.com, password=provided
+DEBUG - 2025-05-17 18:27:53 --> Resultado de la consulta: user=null
+ERROR - 2025-05-17 18:27:53 --> Usuario no encontrado: alf@alf.com
+DEBUG - 2025-05-17 18:27:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 18:27:54 --> Accediendo a Auth::login
+DEBUG - 2025-05-17 18:27:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 18:28:35 --> Accediendo a Auth::attemptLogin
+DEBUG - 2025-05-17 18:28:35 --> Datos recibidos: correo=alf@gmail.com, password=provided
+DEBUG - 2025-05-17 18:28:35 --> Resultado de la consulta: user={"id":"6","nombre":"Alfredo","apellido":"Galv\u00e1n","correo":"alf@gmail.com","contrasena":"$2y$10$\/4SKcsVpakxam5Stvk2ove\/5HMQ51c1DguuyCKLbUHfxNzXzjncY6","fecha_creacion":"2025-05-15 11:43:24"}
+DEBUG - 2025-05-17 18:28:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 18:28:35 --> Inicio de sesión exitoso para: alf@gmail.com
+DEBUG - 2025-05-17 18:28:35 --> Redirigiendo a: profile (URL completa: http://localhost/framework-ci4/index.php/profile)
+DEBUG - 2025-05-17 18:28:36 --> Accediendo a UserController::profile
+DEBUG - 2025-05-17 18:28:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 18:31:34 --> Accediendo a Tasks::index
+DEBUG - 2025-05-17 18:31:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 18:31:34 --> User ID en sesión: 6
+DEBUG - 2025-05-17 18:31:34 --> Correo logueado: alf@gmail.com
+DEBUG - 2025-05-17 18:31:34 --> Tareas propias encontradas: 3
+DEBUG - 2025-05-17 18:31:34 --> Correo en sesión: alf@gmail.com
+DEBUG - 2025-05-17 18:31:34 --> Tareas compartidas encontradas: 0
+DEBUG - 2025-05-17 18:31:34 --> Total de tareas combinadas: 3
+DEBUG - 2025-05-17 18:32:00 --> Accediendo a Tasks::index
+DEBUG - 2025-05-17 18:32:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 18:32:00 --> User ID en sesión: 6
+DEBUG - 2025-05-17 18:32:00 --> Correo logueado: alf@gmail.com
+DEBUG - 2025-05-17 18:32:00 --> Tareas propias encontradas: 3
+DEBUG - 2025-05-17 18:32:00 --> Correo en sesión: alf@gmail.com
+DEBUG - 2025-05-17 18:32:00 --> Tareas compartidas encontradas: 0
+DEBUG - 2025-05-17 18:32:00 --> Total de tareas combinadas: 3
+DEBUG - 2025-05-17 18:32:03 --> Accediendo a Auth::logout
+DEBUG - 2025-05-17 18:32:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 18:32:03 --> Accediendo a Auth::login
+DEBUG - 2025-05-17 18:32:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 18:32:11 --> Accediendo a Auth::attemptLogin
+DEBUG - 2025-05-17 18:32:11 --> Datos recibidos: correo=999@999.com, password=provided
+DEBUG - 2025-05-17 18:32:11 --> Resultado de la consulta: user={"id":"1","nombre":"999","apellido":"999","correo":"999@999.com","contrasena":"$2y$10$wGnsPspK2bUR5myNL8Ov6efoU9Q3RZR4KxLg\/pZK0Ce8xJtpgIcge","fecha_creacion":"2025-05-13 16:10:27"}
+DEBUG - 2025-05-17 18:32:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 18:32:11 --> Inicio de sesión exitoso para: 999@999.com
+DEBUG - 2025-05-17 18:32:11 --> Redirigiendo a: profile (URL completa: http://localhost/framework-ci4/index.php/profile)
+DEBUG - 2025-05-17 18:32:11 --> Accediendo a UserController::profile
+DEBUG - 2025-05-17 18:32:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 18:32:45 --> Accediendo a UserController::profile
+DEBUG - 2025-05-17 18:32:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 18:33:01 --> Accediendo a Tasks::index
+DEBUG - 2025-05-17 18:33:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 18:33:01 --> User ID en sesión: 1
+DEBUG - 2025-05-17 18:33:01 --> Correo logueado: 999@999.com
+DEBUG - 2025-05-17 18:33:01 --> Tareas propias encontradas: 0
+DEBUG - 2025-05-17 18:33:01 --> Correo en sesión: 999@999.com
+DEBUG - 2025-05-17 18:33:01 --> Tareas compartidas encontradas: 1
+DEBUG - 2025-05-17 18:33:01 --> Total de tareas combinadas: 1
+DEBUG - 2025-05-17 18:33:36 --> Accediendo a Tasks::index
+DEBUG - 2025-05-17 18:33:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 18:33:36 --> User ID en sesión: 1
+DEBUG - 2025-05-17 18:33:36 --> Correo logueado: 999@999.com
+DEBUG - 2025-05-17 18:33:36 --> Tareas propias encontradas: 0
+DEBUG - 2025-05-17 18:33:36 --> Correo en sesión: 999@999.com
+DEBUG - 2025-05-17 18:33:36 --> Tareas compartidas encontradas: 1
+DEBUG - 2025-05-17 18:33:36 --> Total de tareas combinadas: 1
+DEBUG - 2025-05-17 18:33:40 --> Accediendo a Auth::logout
+DEBUG - 2025-05-17 18:33:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 18:33:40 --> Accediendo a Auth::login
+DEBUG - 2025-05-17 18:33:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 18:33:46 --> Accediendo a Auth::attemptLogin
+DEBUG - 2025-05-17 18:33:46 --> Datos recibidos: correo=999@999.com, password=provided
+DEBUG - 2025-05-17 18:33:46 --> Resultado de la consulta: user={"id":"1","nombre":"999","apellido":"999","correo":"999@999.com","contrasena":"$2y$10$wGnsPspK2bUR5myNL8Ov6efoU9Q3RZR4KxLg\/pZK0Ce8xJtpgIcge","fecha_creacion":"2025-05-13 16:10:27"}
+DEBUG - 2025-05-17 18:33:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 18:33:46 --> Inicio de sesión exitoso para: 999@999.com
+DEBUG - 2025-05-17 18:33:46 --> Redirigiendo a: profile (URL completa: http://localhost/framework-ci4/index.php/profile)
+DEBUG - 2025-05-17 18:33:46 --> Accediendo a UserController::profile
+DEBUG - 2025-05-17 18:33:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 18:34:14 --> Accediendo a Home::index
+DEBUG - 2025-05-17 18:34:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-17 18:34:14 --> ErrorException: Undefined variable $correo_logueado
+[Method: GET, Route: /]
+in APPPATH\Views\tasks\index.php on line 14.
+ 1 APPPATH\Views\tasks\index.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $correo_logueado', 'G:\\xampp\\htdocs\\framework-ci4\\app\\Views\\tasks\\index.php', 14)
+ 2 SYSTEMPATH\View\View.php(224): include('G:\\xampp\\htdocs\\framework-ci4\\app\\Views\\tasks\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('tasks\\index', [], true)
+ 5 APPPATH\Controllers\Home.php(13): view('tasks\\index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-17 18:34:50 --> Accediendo a Home::index
+DEBUG - 2025-05-17 18:34:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 18:35:03 --> Accediendo a Auth::attemptLogin
+DEBUG - 2025-05-17 18:35:03 --> Datos recibidos: correo=999@999.com, password=provided
+DEBUG - 2025-05-17 18:35:03 --> Resultado de la consulta: user={"id":"1","nombre":"999","apellido":"999","correo":"999@999.com","contrasena":"$2y$10$wGnsPspK2bUR5myNL8Ov6efoU9Q3RZR4KxLg\/pZK0Ce8xJtpgIcge","fecha_creacion":"2025-05-13 16:10:27"}
+DEBUG - 2025-05-17 18:35:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 18:35:03 --> Inicio de sesión exitoso para: 999@999.com
+DEBUG - 2025-05-17 18:35:03 --> Redirigiendo a: profile (URL completa: http://localhost/framework-ci4/index.php/profile)
+DEBUG - 2025-05-17 18:35:03 --> Accediendo a UserController::profile
+DEBUG - 2025-05-17 18:35:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 19:36:56 --> Accediendo a Tasks::index
+DEBUG - 2025-05-17 19:36:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 19:36:56 --> User ID en sesión: 1
+DEBUG - 2025-05-17 19:36:56 --> Correo logueado: 999@999.com
+DEBUG - 2025-05-17 19:36:57 --> Tareas propias encontradas: 0
+DEBUG - 2025-05-17 19:36:57 --> Correo en sesión: 999@999.com
+DEBUG - 2025-05-17 19:36:57 --> Tareas compartidas encontradas: 1
+DEBUG - 2025-05-17 19:36:57 --> Total de tareas combinadas: 1
+DEBUG - 2025-05-17 19:37:57 --> Accediendo a Tasks::index
+DEBUG - 2025-05-17 19:37:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 19:37:57 --> User ID en sesión: 1
+DEBUG - 2025-05-17 19:37:57 --> Correo logueado: 999@999.com
+DEBUG - 2025-05-17 19:37:57 --> Tareas propias encontradas: 0
+DEBUG - 2025-05-17 19:37:57 --> Correo en sesión: 999@999.com
+DEBUG - 2025-05-17 19:37:57 --> Tareas compartidas encontradas: 1
+DEBUG - 2025-05-17 19:37:57 --> Total de tareas combinadas: 1
+DEBUG - 2025-05-17 19:38:00 --> Accediendo a Auth::logout
+DEBUG - 2025-05-17 19:38:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 19:38:00 --> Accediendo a Auth::login
+DEBUG - 2025-05-17 19:38:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 19:38:09 --> Accediendo a Auth::attemptLogin
+DEBUG - 2025-05-17 19:38:09 --> Datos recibidos: correo=2@2.com, password=provided
+DEBUG - 2025-05-17 19:38:09 --> Resultado de la consulta: user={"id":"3","nombre":"222","apellido":"222","correo":"2@2.com","contrasena":"$2y$10$WhHLBO.KRzYAsUPmVTiqGOGfsMtUga0Td\/.oemAV6U6BbjijMigQK","fecha_creacion":"2025-05-13 21:55:24"}
+DEBUG - 2025-05-17 19:38:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 19:38:09 --> Inicio de sesión exitoso para: 2@2.com
+DEBUG - 2025-05-17 19:38:09 --> Redirigiendo a: profile (URL completa: http://localhost/framework-ci4/index.php/profile)
+DEBUG - 2025-05-17 19:38:09 --> Accediendo a UserController::profile
+DEBUG - 2025-05-17 19:38:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 19:38:22 --> Accediendo a UserController::profile
+DEBUG - 2025-05-17 19:38:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 19:46:56 --> Accediendo a Tasks::index
+DEBUG - 2025-05-17 19:46:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 19:46:56 --> User ID en sesión: 3
+DEBUG - 2025-05-17 19:46:56 --> Correo logueado: 2@2.com
+DEBUG - 2025-05-17 19:46:56 --> Tareas propias encontradas: 3
+DEBUG - 2025-05-17 19:46:56 --> Correo en sesión: 2@2.com
+DEBUG - 2025-05-17 19:46:56 --> Tareas compartidas encontradas: 2
+DEBUG - 2025-05-17 19:46:56 --> Total de tareas combinadas: 5
+DEBUG - 2025-05-17 19:54:03 --> Accediendo a Tasks::index
+DEBUG - 2025-05-17 19:54:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 19:54:03 --> User ID en sesión: 3
+DEBUG - 2025-05-17 19:54:03 --> Correo logueado: 2@2.com
+DEBUG - 2025-05-17 19:54:03 --> Tareas propias encontradas: 3
+DEBUG - 2025-05-17 19:54:03 --> Correo en sesión: 2@2.com
+DEBUG - 2025-05-17 19:54:03 --> Tareas compartidas encontradas: 2
+DEBUG - 2025-05-17 19:54:03 --> Total de tareas combinadas: 5
+DEBUG - 2025-05-17 20:01:34 --> Accediendo a Tasks::index
+DEBUG - 2025-05-17 20:01:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 20:01:34 --> User ID en sesión: 3
+DEBUG - 2025-05-17 20:01:34 --> Correo logueado: 2@2.com
+DEBUG - 2025-05-17 20:01:34 --> Tareas propias encontradas: 3
+DEBUG - 2025-05-17 20:01:34 --> Correo en sesión: 2@2.com
+DEBUG - 2025-05-17 20:01:34 --> Tareas compartidas encontradas: 2
+DEBUG - 2025-05-17 20:01:34 --> Total de tareas combinadas: 5
+DEBUG - 2025-05-17 20:04:52 --> Accediendo a Auth::logout
+DEBUG - 2025-05-17 20:04:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 20:04:52 --> Accediendo a Auth::login
+DEBUG - 2025-05-17 20:04:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 20:05:00 --> Accediendo a Auth::attemptLogin
+DEBUG - 2025-05-17 20:05:00 --> Datos recibidos: correo=2@2.com, password=provided
+DEBUG - 2025-05-17 20:05:00 --> Resultado de la consulta: user={"id":"3","nombre":"222","apellido":"222","correo":"2@2.com","contrasena":"$2y$10$WhHLBO.KRzYAsUPmVTiqGOGfsMtUga0Td\/.oemAV6U6BbjijMigQK","fecha_creacion":"2025-05-13 21:55:24"}
+DEBUG - 2025-05-17 20:05:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 20:05:00 --> Inicio de sesión exitoso para: 2@2.com
+DEBUG - 2025-05-17 20:05:00 --> Redirigiendo a: Panel de Tareas (URL completa: http://localhost/framework-ci4/index.php/tasks)
+DEBUG - 2025-05-17 20:05:01 --> Accediendo a Tasks::index
+DEBUG - 2025-05-17 20:05:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 20:05:01 --> User ID en sesión: 3
+DEBUG - 2025-05-17 20:05:01 --> Correo logueado: 2@2.com
+DEBUG - 2025-05-17 20:05:01 --> Tareas propias encontradas: 3
+DEBUG - 2025-05-17 20:05:01 --> Correo en sesión: 2@2.com
+DEBUG - 2025-05-17 20:05:01 --> Tareas compartidas encontradas: 2
+DEBUG - 2025-05-17 20:05:01 --> Total de tareas combinadas: 5
+DEBUG - 2025-05-17 20:05:37 --> Accediendo a Tasks::archived
+DEBUG - 2025-05-17 20:05:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 20:05:37 --> User ID en sesión: 3
+DEBUG - 2025-05-17 20:05:37 --> Correo logueado: 2@2.com
+DEBUG - 2025-05-17 20:05:37 --> Tareas propias archivadas encontradas: 2
+DEBUG - 2025-05-17 20:05:37 --> Correo en sesión: 2@2.com
+DEBUG - 2025-05-17 20:05:37 --> Tareas compartidas archivadas encontradas: 2
+DEBUG - 2025-05-17 20:05:37 --> Total de tareas archivadas combinadas: 4
+DEBUG - 2025-05-17 20:13:09 --> Accediendo a Tasks::index
+DEBUG - 2025-05-17 20:13:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 20:13:09 --> User ID en sesión: 3
+DEBUG - 2025-05-17 20:13:09 --> Correo logueado: 2@2.com
+DEBUG - 2025-05-17 20:13:09 --> Tareas propias encontradas: 3
+DEBUG - 2025-05-17 20:13:09 --> Correo en sesión: 2@2.com
+DEBUG - 2025-05-17 20:13:09 --> Tareas compartidas encontradas: 2
+DEBUG - 2025-05-17 20:13:09 --> Total de tareas combinadas: 5
+DEBUG - 2025-05-17 20:13:34 --> Accediendo a Tasks::index
+DEBUG - 2025-05-17 20:13:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-17 20:13:34 --> User ID en sesión: 3
+DEBUG - 2025-05-17 20:13:34 --> Correo logueado: 2@2.com
+DEBUG - 2025-05-17 20:13:34 --> Tareas propias encontradas: 3
+DEBUG - 2025-05-17 20:13:34 --> Correo en sesión: 2@2.com
+DEBUG - 2025-05-17 20:13:34 --> Tareas compartidas encontradas: 2
+DEBUG - 2025-05-17 20:13:34 --> Total de tareas combinadas: 5
