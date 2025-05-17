@@ -1,0 +1,1869 @@
+DEBUG - 2025-05-15 00:35:58 --> Accediendo a Tasks::index
+DEBUG - 2025-05-15 00:35:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 00:35:58 --> User ID en sesión: null
+ERROR - 2025-05-15 00:35:58 --> No hay usuario logueado
+DEBUG - 2025-05-15 00:35:58 --> Accediendo a Auth::login
+DEBUG - 2025-05-15 00:35:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 00:36:11 --> Accediendo a Auth::attemptLogin
+DEBUG - 2025-05-15 00:36:11 --> Datos recibidos: correo=2@2.com, password=provided
+DEBUG - 2025-05-15 00:36:11 --> Resultado de la consulta: user={"id":"3","nombre":"222","apellido":"222","correo":"2@2.com","contrasena":"$2y$10$WhHLBO.KRzYAsUPmVTiqGOGfsMtUga0Td\/.oemAV6U6BbjijMigQK","fecha_creacion":"2025-05-13 21:55:24"}
+ERROR - 2025-05-15 00:36:11 --> Columna contraseña_hash no encontrada en usuario: {"id":"3","nombre":"222","apellido":"222","correo":"2@2.com","contrasena":"$2y$10$WhHLBO.KRzYAsUPmVTiqGOGfsMtUga0Td\/.oemAV6U6BbjijMigQK","fecha_creacion":"2025-05-13 21:55:24"}
+DEBUG - 2025-05-15 00:36:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 00:36:11 --> Accediendo a Auth::login
+DEBUG - 2025-05-15 00:36:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 00:36:25 --> Accediendo a SignupController::index
+DEBUG - 2025-05-15 00:36:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 00:37:02 --> Accediendo a SignupController::store
+DEBUG - 2025-05-15 00:37:02 --> Método HTTP detectado: POST
+DEBUG - 2025-05-15 00:37:02 --> Datos recibidos: Array
+(
+    [nombre] => 111
+    [apellido] => 111
+    [correo] => alf@alf.com
+    [contrasena] => 123456789
+)
+
+DEBUG - 2025-05-15 00:37:02 --> Datos POST confirmados
+ERROR - 2025-05-15 00:37:02 --> mysqli_sql_exception: Unknown column 'contraseña_hash' in 'field list' in G:\xampp\htdocs\framework-ci4\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 G:\xampp\htdocs\framework-ci4\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `us...', 0)
+#1 G:\xampp\htdocs\framework-ci4\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 G:\xampp\htdocs\framework-ci4\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 G:\xampp\htdocs\framework-ci4\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 G:\xampp\htdocs\framework-ci4\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 G:\xampp\htdocs\framework-ci4\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 G:\xampp\htdocs\framework-ci4\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, false)
+#7 G:\xampp\htdocs\framework-ci4\system\BaseModel.php(750): CodeIgniter\Model->insert(Array, false)
+#8 G:\xampp\htdocs\framework-ci4\app\Controllers\SignupController.php(54): CodeIgniter\BaseModel->save(Array)
+#9 G:\xampp\htdocs\framework-ci4\system\CodeIgniter.php(933): App\Controllers\SignupController->store()
+#10 G:\xampp\htdocs\framework-ci4\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+#11 G:\xampp\htdocs\framework-ci4\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 G:\xampp\htdocs\framework-ci4\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 G:\xampp\htdocs\framework-ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 G:\xampp\htdocs\framework-ci4\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-05-15 00:37:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'contraseña_hash' in 'field list'
+[Method: POST, Route: register]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (:correo:, :contraseña_hash:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\SignupController.php(54): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SignupController->store()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-15 00:37:02 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'contraseña_hash' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (\'alf@alf.com\', \'$2y$10$vDRKwxFFjKdHahEAwrwTse8z0oC1I5LGM9pSEXGCUGEduEs2c8mYm\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (\'alf@alf.com\', \'$2y$10$vDRKwxFFjKdHahEAwrwTse8z0oC1I5LGM9pSEXGCUGEduEs2c8mYm\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (:correo:, :contraseña_hash:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\SignupController.php(54): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SignupController->store()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-15 00:37:02 --> [Caused by] mysqli_sql_exception: Unknown column 'contraseña_hash' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (\'alf@alf.com\', \'$2y$10$vDRKwxFFjKdHahEAwrwTse8z0oC1I5LGM9pSEXGCUGEduEs2c8mYm\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (\'alf@alf.com\', \'$2y$10$vDRKwxFFjKdHahEAwrwTse8z0oC1I5LGM9pSEXGCUGEduEs2c8mYm\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (\'alf@alf.com\', \'$2y$10$vDRKwxFFjKdHahEAwrwTse8z0oC1I5LGM9pSEXGCUGEduEs2c8mYm\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (:correo:, :contraseña_hash:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\SignupController.php(54): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SignupController->store()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-15 00:37:50 --> Accediendo a SignupController::index
+DEBUG - 2025-05-15 00:37:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 00:37:56 --> Accediendo a SignupController::store
+DEBUG - 2025-05-15 00:37:56 --> Método HTTP detectado: POST
+DEBUG - 2025-05-15 00:37:56 --> Datos recibidos: Array
+(
+    [nombre] => 111
+    [apellido] => 111
+    [correo] => alf@alf.com
+    [contrasena] => 123456789
+)
+
+DEBUG - 2025-05-15 00:37:56 --> Datos POST confirmados
+ERROR - 2025-05-15 00:37:56 --> mysqli_sql_exception: Unknown column 'contraseña_hash' in 'field list' in G:\xampp\htdocs\framework-ci4\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 G:\xampp\htdocs\framework-ci4\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `us...', 0)
+#1 G:\xampp\htdocs\framework-ci4\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 G:\xampp\htdocs\framework-ci4\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 G:\xampp\htdocs\framework-ci4\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 G:\xampp\htdocs\framework-ci4\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 G:\xampp\htdocs\framework-ci4\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 G:\xampp\htdocs\framework-ci4\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, false)
+#7 G:\xampp\htdocs\framework-ci4\system\BaseModel.php(750): CodeIgniter\Model->insert(Array, false)
+#8 G:\xampp\htdocs\framework-ci4\app\Controllers\SignupController.php(54): CodeIgniter\BaseModel->save(Array)
+#9 G:\xampp\htdocs\framework-ci4\system\CodeIgniter.php(933): App\Controllers\SignupController->store()
+#10 G:\xampp\htdocs\framework-ci4\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+#11 G:\xampp\htdocs\framework-ci4\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 G:\xampp\htdocs\framework-ci4\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 G:\xampp\htdocs\framework-ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 G:\xampp\htdocs\framework-ci4\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-05-15 00:37:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'contraseña_hash' in 'field list'
+[Method: POST, Route: register]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (:correo:, :contraseña_hash:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\SignupController.php(54): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SignupController->store()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-15 00:37:56 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'contraseña_hash' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (\'alf@alf.com\', \'$2y$10$hAnyW9wiZdrA97TMaDN1uO3nsil6BFJnJtLmxCRVqj8cqZFPREnUO\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (\'alf@alf.com\', \'$2y$10$hAnyW9wiZdrA97TMaDN1uO3nsil6BFJnJtLmxCRVqj8cqZFPREnUO\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (:correo:, :contraseña_hash:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\SignupController.php(54): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SignupController->store()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-15 00:37:56 --> [Caused by] mysqli_sql_exception: Unknown column 'contraseña_hash' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (\'alf@alf.com\', \'$2y$10$hAnyW9wiZdrA97TMaDN1uO3nsil6BFJnJtLmxCRVqj8cqZFPREnUO\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (\'alf@alf.com\', \'$2y$10$hAnyW9wiZdrA97TMaDN1uO3nsil6BFJnJtLmxCRVqj8cqZFPREnUO\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (\'alf@alf.com\', \'$2y$10$hAnyW9wiZdrA97TMaDN1uO3nsil6BFJnJtLmxCRVqj8cqZFPREnUO\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (:correo:, :contraseña_hash:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\SignupController.php(54): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SignupController->store()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-15 00:38:15 --> Accediendo a Auth::login
+DEBUG - 2025-05-15 00:38:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 00:38:26 --> Accediendo a Auth::attemptLogin
+DEBUG - 2025-05-15 00:38:26 --> Datos recibidos: correo=999@999.com, password=provided
+DEBUG - 2025-05-15 00:38:26 --> Resultado de la consulta: user={"id":"1","nombre":"999","apellido":"999","correo":"999@999.com","contrasena":"$2y$10$wGnsPspK2bUR5myNL8Ov6efoU9Q3RZR4KxLg\/pZK0Ce8xJtpgIcge","fecha_creacion":"2025-05-13 16:10:27"}
+ERROR - 2025-05-15 00:38:26 --> Columna contraseña_hash no encontrada en usuario: {"id":"1","nombre":"999","apellido":"999","correo":"999@999.com","contrasena":"$2y$10$wGnsPspK2bUR5myNL8Ov6efoU9Q3RZR4KxLg\/pZK0Ce8xJtpgIcge","fecha_creacion":"2025-05-13 16:10:27"}
+DEBUG - 2025-05-15 00:38:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 00:38:31 --> Accediendo a Auth::login
+DEBUG - 2025-05-15 00:38:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 00:38:37 --> Accediendo a Auth::attemptLogin
+DEBUG - 2025-05-15 00:38:37 --> Datos recibidos: correo=999@999.com, password=provided
+DEBUG - 2025-05-15 00:38:37 --> Resultado de la consulta: user={"id":"1","nombre":"999","apellido":"999","correo":"999@999.com","contrasena":"$2y$10$wGnsPspK2bUR5myNL8Ov6efoU9Q3RZR4KxLg\/pZK0Ce8xJtpgIcge","fecha_creacion":"2025-05-13 16:10:27"}
+ERROR - 2025-05-15 00:38:37 --> Columna contraseña_hash no encontrada en usuario: {"id":"1","nombre":"999","apellido":"999","correo":"999@999.com","contrasena":"$2y$10$wGnsPspK2bUR5myNL8Ov6efoU9Q3RZR4KxLg\/pZK0Ce8xJtpgIcge","fecha_creacion":"2025-05-13 16:10:27"}
+DEBUG - 2025-05-15 00:38:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 00:39:01 --> Accediendo a Tasks::index
+DEBUG - 2025-05-15 00:39:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 00:39:01 --> User ID en sesión: null
+ERROR - 2025-05-15 00:39:01 --> No hay usuario logueado
+DEBUG - 2025-05-15 00:39:01 --> Accediendo a Auth::login
+DEBUG - 2025-05-15 00:39:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 07:15:32 --> Accediendo a Auth::attemptLogin
+DEBUG - 2025-05-15 07:15:33 --> Datos recibidos: correo=2@2.com, password=provided
+DEBUG - 2025-05-15 07:15:33 --> Resultado de la consulta: user={"id":"3","nombre":"222","apellido":"222","correo":"2@2.com","contrasena":"$2y$10$WhHLBO.KRzYAsUPmVTiqGOGfsMtUga0Td\/.oemAV6U6BbjijMigQK","fecha_creacion":"2025-05-13 21:55:24"}
+ERROR - 2025-05-15 07:15:33 --> Columna contraseña_hash no encontrada en usuario: {"id":"3","nombre":"222","apellido":"222","correo":"2@2.com","contrasena":"$2y$10$WhHLBO.KRzYAsUPmVTiqGOGfsMtUga0Td\/.oemAV6U6BbjijMigQK","fecha_creacion":"2025-05-13 21:55:24"}
+DEBUG - 2025-05-15 07:15:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 07:15:34 --> Accediendo a Auth::attemptLogin
+DEBUG - 2025-05-15 07:15:34 --> Datos recibidos: correo=2@2.com, password=provided
+DEBUG - 2025-05-15 07:15:34 --> Resultado de la consulta: user={"id":"3","nombre":"222","apellido":"222","correo":"2@2.com","contrasena":"$2y$10$WhHLBO.KRzYAsUPmVTiqGOGfsMtUga0Td\/.oemAV6U6BbjijMigQK","fecha_creacion":"2025-05-13 21:55:24"}
+ERROR - 2025-05-15 07:15:34 --> Columna contraseña_hash no encontrada en usuario: {"id":"3","nombre":"222","apellido":"222","correo":"2@2.com","contrasena":"$2y$10$WhHLBO.KRzYAsUPmVTiqGOGfsMtUga0Td\/.oemAV6U6BbjijMigQK","fecha_creacion":"2025-05-13 21:55:24"}
+DEBUG - 2025-05-15 07:15:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 07:15:35 --> Accediendo a Auth::login
+DEBUG - 2025-05-15 07:15:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 07:15:54 --> Accediendo a Auth::attemptLogin
+DEBUG - 2025-05-15 07:15:54 --> Datos recibidos: correo=444@444.com, password=provided
+DEBUG - 2025-05-15 07:15:54 --> Resultado de la consulta: user=null
+ERROR - 2025-05-15 07:15:54 --> Usuario no encontrado: 444@444.com
+DEBUG - 2025-05-15 07:15:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 07:15:54 --> Accediendo a Auth::login
+DEBUG - 2025-05-15 07:15:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 07:16:21 --> Accediendo a SignupController::store
+DEBUG - 2025-05-15 07:16:21 --> Método HTTP detectado: POST
+DEBUG - 2025-05-15 07:16:21 --> Datos recibidos: Array
+(
+    [nombre] => 111
+    [apellido] => 111
+    [correo] => alf@alf.com
+    [contrasena] => 123456789
+)
+
+DEBUG - 2025-05-15 07:16:21 --> Datos POST confirmados
+ERROR - 2025-05-15 07:16:21 --> mysqli_sql_exception: Unknown column 'contraseña_hash' in 'field list' in G:\xampp\htdocs\framework-ci4\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 G:\xampp\htdocs\framework-ci4\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `us...', 0)
+#1 G:\xampp\htdocs\framework-ci4\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 G:\xampp\htdocs\framework-ci4\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 G:\xampp\htdocs\framework-ci4\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 G:\xampp\htdocs\framework-ci4\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 G:\xampp\htdocs\framework-ci4\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 G:\xampp\htdocs\framework-ci4\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, false)
+#7 G:\xampp\htdocs\framework-ci4\system\BaseModel.php(750): CodeIgniter\Model->insert(Array, false)
+#8 G:\xampp\htdocs\framework-ci4\app\Controllers\SignupController.php(54): CodeIgniter\BaseModel->save(Array)
+#9 G:\xampp\htdocs\framework-ci4\system\CodeIgniter.php(933): App\Controllers\SignupController->store()
+#10 G:\xampp\htdocs\framework-ci4\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+#11 G:\xampp\htdocs\framework-ci4\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 G:\xampp\htdocs\framework-ci4\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 G:\xampp\htdocs\framework-ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 G:\xampp\htdocs\framework-ci4\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-05-15 07:16:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'contraseña_hash' in 'field list'
+[Method: POST, Route: register]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (:correo:, :contraseña_hash:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\SignupController.php(54): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SignupController->store()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-15 07:16:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'contraseña_hash' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (\'alf@alf.com\', \'$2y$10$fhGQPLdhoSiNilYjdDAAqOeocqxi6OI87M0kVzMajvBKpxLAQlqCm\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (\'alf@alf.com\', \'$2y$10$fhGQPLdhoSiNilYjdDAAqOeocqxi6OI87M0kVzMajvBKpxLAQlqCm\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (:correo:, :contraseña_hash:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\SignupController.php(54): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SignupController->store()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-15 07:16:21 --> [Caused by] mysqli_sql_exception: Unknown column 'contraseña_hash' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (\'alf@alf.com\', \'$2y$10$fhGQPLdhoSiNilYjdDAAqOeocqxi6OI87M0kVzMajvBKpxLAQlqCm\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (\'alf@alf.com\', \'$2y$10$fhGQPLdhoSiNilYjdDAAqOeocqxi6OI87M0kVzMajvBKpxLAQlqCm\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (\'alf@alf.com\', \'$2y$10$fhGQPLdhoSiNilYjdDAAqOeocqxi6OI87M0kVzMajvBKpxLAQlqCm\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (:correo:, :contraseña_hash:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\SignupController.php(54): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SignupController->store()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-15 07:16:37 --> Accediendo a Auth::login
+DEBUG - 2025-05-15 07:16:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 07:16:47 --> Accediendo a Auth::attemptLogin
+DEBUG - 2025-05-15 07:16:47 --> Datos recibidos: correo=999@999.com, password=provided
+DEBUG - 2025-05-15 07:16:47 --> Resultado de la consulta: user={"id":"1","nombre":"999","apellido":"999","correo":"999@999.com","contrasena":"$2y$10$wGnsPspK2bUR5myNL8Ov6efoU9Q3RZR4KxLg\/pZK0Ce8xJtpgIcge","fecha_creacion":"2025-05-13 16:10:27"}
+ERROR - 2025-05-15 07:16:47 --> Columna contraseña_hash no encontrada en usuario: {"id":"1","nombre":"999","apellido":"999","correo":"999@999.com","contrasena":"$2y$10$wGnsPspK2bUR5myNL8Ov6efoU9Q3RZR4KxLg\/pZK0Ce8xJtpgIcge","fecha_creacion":"2025-05-13 16:10:27"}
+DEBUG - 2025-05-15 07:16:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 07:16:53 --> Accediendo a Auth::login
+DEBUG - 2025-05-15 07:16:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 07:16:58 --> Accediendo a SignupController::index
+DEBUG - 2025-05-15 07:16:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 07:17:27 --> Accediendo a Auth::login
+DEBUG - 2025-05-15 07:17:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 07:17:38 --> Accediendo a Auth::attemptLogin
+DEBUG - 2025-05-15 07:17:38 --> Datos recibidos: correo=999@999.com, password=provided
+DEBUG - 2025-05-15 07:17:38 --> Resultado de la consulta: user={"id":"1","nombre":"999","apellido":"999","correo":"999@999.com","contrasena":"$2y$10$wGnsPspK2bUR5myNL8Ov6efoU9Q3RZR4KxLg\/pZK0Ce8xJtpgIcge","fecha_creacion":"2025-05-13 16:10:27"}
+ERROR - 2025-05-15 07:17:38 --> Columna contraseña_hash no encontrada en usuario: {"id":"1","nombre":"999","apellido":"999","correo":"999@999.com","contrasena":"$2y$10$wGnsPspK2bUR5myNL8Ov6efoU9Q3RZR4KxLg\/pZK0Ce8xJtpgIcge","fecha_creacion":"2025-05-13 16:10:27"}
+DEBUG - 2025-05-15 07:17:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 07:18:08 --> Accediendo a SignupController::index
+DEBUG - 2025-05-15 07:18:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 07:18:26 --> Accediendo a SignupController::store
+DEBUG - 2025-05-15 07:18:26 --> Método HTTP detectado: POST
+DEBUG - 2025-05-15 07:18:26 --> Datos recibidos: Array
+(
+    [nombre] => admin
+    [apellido] => admin
+    [correo] => admin@admin.com
+    [contrasena] => 123456789
+)
+
+DEBUG - 2025-05-15 07:18:26 --> Datos POST confirmados
+ERROR - 2025-05-15 07:18:26 --> mysqli_sql_exception: Unknown column 'contraseña_hash' in 'field list' in G:\xampp\htdocs\framework-ci4\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 G:\xampp\htdocs\framework-ci4\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `us...', 0)
+#1 G:\xampp\htdocs\framework-ci4\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 G:\xampp\htdocs\framework-ci4\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 G:\xampp\htdocs\framework-ci4\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 G:\xampp\htdocs\framework-ci4\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 G:\xampp\htdocs\framework-ci4\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 G:\xampp\htdocs\framework-ci4\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, false)
+#7 G:\xampp\htdocs\framework-ci4\system\BaseModel.php(750): CodeIgniter\Model->insert(Array, false)
+#8 G:\xampp\htdocs\framework-ci4\app\Controllers\SignupController.php(54): CodeIgniter\BaseModel->save(Array)
+#9 G:\xampp\htdocs\framework-ci4\system\CodeIgniter.php(933): App\Controllers\SignupController->store()
+#10 G:\xampp\htdocs\framework-ci4\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+#11 G:\xampp\htdocs\framework-ci4\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 G:\xampp\htdocs\framework-ci4\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 G:\xampp\htdocs\framework-ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 G:\xampp\htdocs\framework-ci4\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-05-15 07:18:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'contraseña_hash' in 'field list'
+[Method: POST, Route: register]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (:correo:, :contraseña_hash:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\SignupController.php(54): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SignupController->store()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-15 07:18:26 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'contraseña_hash' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (\'admin@admin.com\', \'$2y$10$UEvbjTlxJBFlXuS264Rg0.UUznUo.rWWD1fnI/U/4qVG1sbQeIPbi\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (\'admin@admin.com\', \'$2y$10$UEvbjTlxJBFlXuS264Rg0.UUznUo.rWWD1fnI/U/4qVG1sbQeIPbi\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (:correo:, :contraseña_hash:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\SignupController.php(54): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SignupController->store()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-15 07:18:26 --> [Caused by] mysqli_sql_exception: Unknown column 'contraseña_hash' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (\'admin@admin.com\', \'$2y$10$UEvbjTlxJBFlXuS264Rg0.UUznUo.rWWD1fnI/U/4qVG1sbQeIPbi\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (\'admin@admin.com\', \'$2y$10$UEvbjTlxJBFlXuS264Rg0.UUznUo.rWWD1fnI/U/4qVG1sbQeIPbi\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (\'admin@admin.com\', \'$2y$10$UEvbjTlxJBFlXuS264Rg0.UUznUo.rWWD1fnI/U/4qVG1sbQeIPbi\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (:correo:, :contraseña_hash:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\SignupController.php(54): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SignupController->store()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-15 07:34:55 --> Accediendo a SignupController::index
+DEBUG - 2025-05-15 07:34:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 07:40:08 --> Accediendo a SignupController::index
+DEBUG - 2025-05-15 07:40:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 07:47:06 --> Accediendo a SignupController::index
+DEBUG - 2025-05-15 07:47:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 07:47:37 --> Accediendo a SignupController::store
+DEBUG - 2025-05-15 07:47:37 --> Método HTTP detectado: POST
+DEBUG - 2025-05-15 07:47:37 --> Datos recibidos: Array
+(
+    [nombre] => admin
+    [apellido] => admin
+    [correo] => admin@admin.com
+    [contrasena] => 123456789
+)
+
+DEBUG - 2025-05-15 07:47:37 --> Datos POST confirmados
+ERROR - 2025-05-15 07:47:38 --> mysqli_sql_exception: Unknown column 'contraseña_hash' in 'field list' in G:\xampp\htdocs\framework-ci4\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 G:\xampp\htdocs\framework-ci4\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `us...', 0)
+#1 G:\xampp\htdocs\framework-ci4\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 G:\xampp\htdocs\framework-ci4\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 G:\xampp\htdocs\framework-ci4\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 G:\xampp\htdocs\framework-ci4\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 G:\xampp\htdocs\framework-ci4\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 G:\xampp\htdocs\framework-ci4\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, false)
+#7 G:\xampp\htdocs\framework-ci4\system\BaseModel.php(750): CodeIgniter\Model->insert(Array, false)
+#8 G:\xampp\htdocs\framework-ci4\app\Controllers\SignupController.php(54): CodeIgniter\BaseModel->save(Array)
+#9 G:\xampp\htdocs\framework-ci4\system\CodeIgniter.php(933): App\Controllers\SignupController->store()
+#10 G:\xampp\htdocs\framework-ci4\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+#11 G:\xampp\htdocs\framework-ci4\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 G:\xampp\htdocs\framework-ci4\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 G:\xampp\htdocs\framework-ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 G:\xampp\htdocs\framework-ci4\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-05-15 07:47:38 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'contraseña_hash' in 'field list'
+[Method: POST, Route: register]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (:correo:, :contraseña_hash:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\SignupController.php(54): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SignupController->store()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-15 07:47:38 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'contraseña_hash' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (\'admin@admin.com\', \'$2y$10$WZLg5n/71SQRAsTTmCo7WezB0d9P8m4nL2FQ45Zri8Fam/hCCGWzu\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (\'admin@admin.com\', \'$2y$10$WZLg5n/71SQRAsTTmCo7WezB0d9P8m4nL2FQ45Zri8Fam/hCCGWzu\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (:correo:, :contraseña_hash:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\SignupController.php(54): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SignupController->store()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-15 07:47:38 --> [Caused by] mysqli_sql_exception: Unknown column 'contraseña_hash' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (\'admin@admin.com\', \'$2y$10$WZLg5n/71SQRAsTTmCo7WezB0d9P8m4nL2FQ45Zri8Fam/hCCGWzu\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (\'admin@admin.com\', \'$2y$10$WZLg5n/71SQRAsTTmCo7WezB0d9P8m4nL2FQ45Zri8Fam/hCCGWzu\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (\'admin@admin.com\', \'$2y$10$WZLg5n/71SQRAsTTmCo7WezB0d9P8m4nL2FQ45Zri8Fam/hCCGWzu\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (:correo:, :contraseña_hash:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\SignupController.php(54): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SignupController->store()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-15 07:47:43 --> Accediendo a Auth::login
+DEBUG - 2025-05-15 07:47:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 07:47:45 --> Accediendo a Auth::login
+DEBUG - 2025-05-15 07:47:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 07:47:54 --> Accediendo a Auth::attemptLogin
+DEBUG - 2025-05-15 07:47:54 --> Datos recibidos: correo=999@999.com, password=provided
+DEBUG - 2025-05-15 07:47:54 --> Resultado de la consulta: user={"id":"1","nombre":"999","apellido":"999","correo":"999@999.com","contrasena":"$2y$10$wGnsPspK2bUR5myNL8Ov6efoU9Q3RZR4KxLg\/pZK0Ce8xJtpgIcge","fecha_creacion":"2025-05-13 16:10:27"}
+ERROR - 2025-05-15 07:47:54 --> Columna contraseña_hash no encontrada en usuario: {"id":"1","nombre":"999","apellido":"999","correo":"999@999.com","contrasena":"$2y$10$wGnsPspK2bUR5myNL8Ov6efoU9Q3RZR4KxLg\/pZK0Ce8xJtpgIcge","fecha_creacion":"2025-05-13 16:10:27"}
+DEBUG - 2025-05-15 07:47:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 07:48:05 --> Accediendo a Auth::attemptLogin
+DEBUG - 2025-05-15 07:48:05 --> Datos recibidos: correo=999@999.com, password=provided
+DEBUG - 2025-05-15 07:48:05 --> Resultado de la consulta: user={"id":"1","nombre":"999","apellido":"999","correo":"999@999.com","contrasena":"$2y$10$wGnsPspK2bUR5myNL8Ov6efoU9Q3RZR4KxLg\/pZK0Ce8xJtpgIcge","fecha_creacion":"2025-05-13 16:10:27"}
+ERROR - 2025-05-15 07:48:05 --> Columna contraseña_hash no encontrada en usuario: {"id":"1","nombre":"999","apellido":"999","correo":"999@999.com","contrasena":"$2y$10$wGnsPspK2bUR5myNL8Ov6efoU9Q3RZR4KxLg\/pZK0Ce8xJtpgIcge","fecha_creacion":"2025-05-13 16:10:27"}
+DEBUG - 2025-05-15 07:48:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 07:48:09 --> Accediendo a Auth::login
+DEBUG - 2025-05-15 07:48:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 07:48:13 --> Accediendo a SignupController::index
+DEBUG - 2025-05-15 07:48:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 07:48:21 --> Accediendo a SignupController::store
+DEBUG - 2025-05-15 07:48:21 --> Método HTTP detectado: POST
+DEBUG - 2025-05-15 07:48:21 --> Datos recibidos: Array
+(
+    [nombre] => admin
+    [apellido] => admin
+    [correo] => admin@admin.com
+    [contrasena] => 123456789
+)
+
+DEBUG - 2025-05-15 07:48:21 --> Datos POST confirmados
+ERROR - 2025-05-15 07:48:22 --> mysqli_sql_exception: Unknown column 'contraseña_hash' in 'field list' in G:\xampp\htdocs\framework-ci4\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 G:\xampp\htdocs\framework-ci4\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `us...', 0)
+#1 G:\xampp\htdocs\framework-ci4\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 G:\xampp\htdocs\framework-ci4\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 G:\xampp\htdocs\framework-ci4\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 G:\xampp\htdocs\framework-ci4\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 G:\xampp\htdocs\framework-ci4\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 G:\xampp\htdocs\framework-ci4\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, false)
+#7 G:\xampp\htdocs\framework-ci4\system\BaseModel.php(750): CodeIgniter\Model->insert(Array, false)
+#8 G:\xampp\htdocs\framework-ci4\app\Controllers\SignupController.php(54): CodeIgniter\BaseModel->save(Array)
+#9 G:\xampp\htdocs\framework-ci4\system\CodeIgniter.php(933): App\Controllers\SignupController->store()
+#10 G:\xampp\htdocs\framework-ci4\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+#11 G:\xampp\htdocs\framework-ci4\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 G:\xampp\htdocs\framework-ci4\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 G:\xampp\htdocs\framework-ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 G:\xampp\htdocs\framework-ci4\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-05-15 07:48:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'contraseña_hash' in 'field list'
+[Method: POST, Route: register]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (:correo:, :contraseña_hash:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\SignupController.php(54): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SignupController->store()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-15 07:48:22 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'contraseña_hash' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (\'admin@admin.com\', \'$2y$10$iajLTfwCQKpvJCR8gRnkUupBcE6/cDL808ZKZgdjHMACYazjfyqe2\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (\'admin@admin.com\', \'$2y$10$iajLTfwCQKpvJCR8gRnkUupBcE6/cDL808ZKZgdjHMACYazjfyqe2\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (:correo:, :contraseña_hash:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\SignupController.php(54): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SignupController->store()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-15 07:48:22 --> [Caused by] mysqli_sql_exception: Unknown column 'contraseña_hash' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (\'admin@admin.com\', \'$2y$10$iajLTfwCQKpvJCR8gRnkUupBcE6/cDL808ZKZgdjHMACYazjfyqe2\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (\'admin@admin.com\', \'$2y$10$iajLTfwCQKpvJCR8gRnkUupBcE6/cDL808ZKZgdjHMACYazjfyqe2\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (\'admin@admin.com\', \'$2y$10$iajLTfwCQKpvJCR8gRnkUupBcE6/cDL808ZKZgdjHMACYazjfyqe2\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (:correo:, :contraseña_hash:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\SignupController.php(54): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SignupController->store()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-15 07:48:34 --> Accediendo a Auth::attemptLogin
+DEBUG - 2025-05-15 07:48:34 --> Datos recibidos: correo=2@2.com, password=provided
+DEBUG - 2025-05-15 07:48:34 --> Resultado de la consulta: user={"id":"3","nombre":"222","apellido":"222","correo":"2@2.com","contrasena":"$2y$10$WhHLBO.KRzYAsUPmVTiqGOGfsMtUga0Td\/.oemAV6U6BbjijMigQK","fecha_creacion":"2025-05-13 21:55:24"}
+ERROR - 2025-05-15 07:48:34 --> Columna contraseña_hash no encontrada en usuario: {"id":"3","nombre":"222","apellido":"222","correo":"2@2.com","contrasena":"$2y$10$WhHLBO.KRzYAsUPmVTiqGOGfsMtUga0Td\/.oemAV6U6BbjijMigQK","fecha_creacion":"2025-05-13 21:55:24"}
+DEBUG - 2025-05-15 07:48:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 07:52:38 --> Accediendo a Auth::login
+DEBUG - 2025-05-15 07:52:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 07:58:51 --> Accediendo a SignupController::index
+DEBUG - 2025-05-15 07:58:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 07:59:08 --> Accediendo a Auth::login
+DEBUG - 2025-05-15 07:59:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 07:59:17 --> Accediendo a Auth::attemptLogin
+DEBUG - 2025-05-15 07:59:17 --> Datos recibidos: correo=999@999.com, password=provided
+DEBUG - 2025-05-15 07:59:17 --> Resultado de la consulta: user={"id":"1","nombre":"999","apellido":"999","correo":"999@999.com","contrasena":"$2y$10$wGnsPspK2bUR5myNL8Ov6efoU9Q3RZR4KxLg\/pZK0Ce8xJtpgIcge","fecha_creacion":"2025-05-13 16:10:27"}
+ERROR - 2025-05-15 07:59:17 --> Columna contraseña_hash no encontrada en usuario: {"id":"1","nombre":"999","apellido":"999","correo":"999@999.com","contrasena":"$2y$10$wGnsPspK2bUR5myNL8Ov6efoU9Q3RZR4KxLg\/pZK0Ce8xJtpgIcge","fecha_creacion":"2025-05-13 16:10:27"}
+DEBUG - 2025-05-15 07:59:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:03:51 --> Accediendo a SignupController::index
+DEBUG - 2025-05-15 08:03:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:04:04 --> Accediendo a Auth::login
+DEBUG - 2025-05-15 08:04:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:04:05 --> Accediendo a Auth::login
+DEBUG - 2025-05-15 08:04:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:04:12 --> Accediendo a Auth::attemptLogin
+DEBUG - 2025-05-15 08:04:12 --> Datos recibidos: correo=999@999.com, password=provided
+DEBUG - 2025-05-15 08:04:12 --> Resultado de la consulta: user={"id":"1","nombre":"999","apellido":"999","correo":"999@999.com","contrasena":"$2y$10$wGnsPspK2bUR5myNL8Ov6efoU9Q3RZR4KxLg\/pZK0Ce8xJtpgIcge","fecha_creacion":"2025-05-13 16:10:27"}
+ERROR - 2025-05-15 08:04:12 --> Columna contraseña_hash no encontrada en usuario: {"id":"1","nombre":"999","apellido":"999","correo":"999@999.com","contrasena":"$2y$10$wGnsPspK2bUR5myNL8Ov6efoU9Q3RZR4KxLg\/pZK0Ce8xJtpgIcge","fecha_creacion":"2025-05-13 16:10:27"}
+DEBUG - 2025-05-15 08:04:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:06:26 --> Accediendo a SignupController::index
+DEBUG - 2025-05-15 08:06:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:06:35 --> Accediendo a Auth::attemptLogin
+DEBUG - 2025-05-15 08:06:35 --> Datos recibidos: correo=999@999.com, password=provided
+DEBUG - 2025-05-15 08:06:35 --> Resultado de la consulta: user={"id":"1","nombre":"999","apellido":"999","correo":"999@999.com","contrasena":"$2y$10$wGnsPspK2bUR5myNL8Ov6efoU9Q3RZR4KxLg\/pZK0Ce8xJtpgIcge","fecha_creacion":"2025-05-13 16:10:27"}
+ERROR - 2025-05-15 08:06:35 --> Columna contraseña_hash no encontrada en usuario: {"id":"1","nombre":"999","apellido":"999","correo":"999@999.com","contrasena":"$2y$10$wGnsPspK2bUR5myNL8Ov6efoU9Q3RZR4KxLg\/pZK0Ce8xJtpgIcge","fecha_creacion":"2025-05-13 16:10:27"}
+DEBUG - 2025-05-15 08:06:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:06:38 --> Accediendo a Auth::login
+DEBUG - 2025-05-15 08:06:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:06:43 --> Accediendo a Auth::attemptLogin
+DEBUG - 2025-05-15 08:06:43 --> Datos recibidos: correo=999@999.com, password=provided
+DEBUG - 2025-05-15 08:06:43 --> Resultado de la consulta: user={"id":"1","nombre":"999","apellido":"999","correo":"999@999.com","contrasena":"$2y$10$wGnsPspK2bUR5myNL8Ov6efoU9Q3RZR4KxLg\/pZK0Ce8xJtpgIcge","fecha_creacion":"2025-05-13 16:10:27"}
+ERROR - 2025-05-15 08:06:43 --> Columna contraseña_hash no encontrada en usuario: {"id":"1","nombre":"999","apellido":"999","correo":"999@999.com","contrasena":"$2y$10$wGnsPspK2bUR5myNL8Ov6efoU9Q3RZR4KxLg\/pZK0Ce8xJtpgIcge","fecha_creacion":"2025-05-13 16:10:27"}
+DEBUG - 2025-05-15 08:06:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:11:33 --> Accediendo a Auth::login
+DEBUG - 2025-05-15 08:11:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:11:34 --> Accediendo a Auth::login
+DEBUG - 2025-05-15 08:11:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:11:41 --> Accediendo a Auth::attemptLogin
+DEBUG - 2025-05-15 08:11:41 --> Datos recibidos: correo=2@2.com, password=provided
+DEBUG - 2025-05-15 08:11:41 --> Resultado de la consulta: user={"id":"3","nombre":"222","apellido":"222","correo":"2@2.com","contrasena":"$2y$10$WhHLBO.KRzYAsUPmVTiqGOGfsMtUga0Td\/.oemAV6U6BbjijMigQK","fecha_creacion":"2025-05-13 21:55:24"}
+ERROR - 2025-05-15 08:11:41 --> Columna contraseña_hash no encontrada en usuario: {"id":"3","nombre":"222","apellido":"222","correo":"2@2.com","contrasena":"$2y$10$WhHLBO.KRzYAsUPmVTiqGOGfsMtUga0Td\/.oemAV6U6BbjijMigQK","fecha_creacion":"2025-05-13 21:55:24"}
+DEBUG - 2025-05-15 08:11:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:11:56 --> Accediendo a Auth::attemptLogin
+DEBUG - 2025-05-15 08:11:56 --> Datos recibidos: correo=2@2.com, password=provided
+DEBUG - 2025-05-15 08:11:56 --> Resultado de la consulta: user={"id":"3","nombre":"222","apellido":"222","correo":"2@2.com","contrasena":"$2y$10$WhHLBO.KRzYAsUPmVTiqGOGfsMtUga0Td\/.oemAV6U6BbjijMigQK","fecha_creacion":"2025-05-13 21:55:24"}
+ERROR - 2025-05-15 08:11:56 --> Columna contraseña_hash no encontrada en usuario: {"id":"3","nombre":"222","apellido":"222","correo":"2@2.com","contrasena":"$2y$10$WhHLBO.KRzYAsUPmVTiqGOGfsMtUga0Td\/.oemAV6U6BbjijMigQK","fecha_creacion":"2025-05-13 21:55:24"}
+DEBUG - 2025-05-15 08:11:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:12:05 --> Accediendo a UserController::profile
+DEBUG - 2025-05-15 08:12:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:12:05 --> Usuario no logueado, redirigiendo a login
+DEBUG - 2025-05-15 08:12:05 --> Accediendo a Auth::login
+DEBUG - 2025-05-15 08:12:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:12:19 --> Accediendo a Auth::attemptLogin
+DEBUG - 2025-05-15 08:12:19 --> Datos recibidos: correo=999@999.com, password=provided
+DEBUG - 2025-05-15 08:12:19 --> Resultado de la consulta: user={"id":"1","nombre":"999","apellido":"999","correo":"999@999.com","contrasena":"$2y$10$wGnsPspK2bUR5myNL8Ov6efoU9Q3RZR4KxLg\/pZK0Ce8xJtpgIcge","fecha_creacion":"2025-05-13 16:10:27"}
+ERROR - 2025-05-15 08:12:19 --> Columna contraseña_hash no encontrada en usuario: {"id":"1","nombre":"999","apellido":"999","correo":"999@999.com","contrasena":"$2y$10$wGnsPspK2bUR5myNL8Ov6efoU9Q3RZR4KxLg\/pZK0Ce8xJtpgIcge","fecha_creacion":"2025-05-13 16:10:27"}
+DEBUG - 2025-05-15 08:12:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:12:19 --> Accediendo a Auth::login
+DEBUG - 2025-05-15 08:12:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:12:28 --> Accediendo a Auth::attemptLogin
+DEBUG - 2025-05-15 08:12:28 --> Datos recibidos: correo=999@999.com, password=provided
+DEBUG - 2025-05-15 08:12:28 --> Resultado de la consulta: user={"id":"1","nombre":"999","apellido":"999","correo":"999@999.com","contrasena":"$2y$10$wGnsPspK2bUR5myNL8Ov6efoU9Q3RZR4KxLg\/pZK0Ce8xJtpgIcge","fecha_creacion":"2025-05-13 16:10:27"}
+ERROR - 2025-05-15 08:12:28 --> Columna contraseña_hash no encontrada en usuario: {"id":"1","nombre":"999","apellido":"999","correo":"999@999.com","contrasena":"$2y$10$wGnsPspK2bUR5myNL8Ov6efoU9Q3RZR4KxLg\/pZK0Ce8xJtpgIcge","fecha_creacion":"2025-05-13 16:10:27"}
+DEBUG - 2025-05-15 08:12:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:12:28 --> Accediendo a Auth::login
+DEBUG - 2025-05-15 08:12:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:12:34 --> Accediendo a Auth::attemptLogin
+DEBUG - 2025-05-15 08:12:34 --> Datos recibidos: correo=2@2.com, password=provided
+DEBUG - 2025-05-15 08:12:34 --> Resultado de la consulta: user={"id":"3","nombre":"222","apellido":"222","correo":"2@2.com","contrasena":"$2y$10$WhHLBO.KRzYAsUPmVTiqGOGfsMtUga0Td\/.oemAV6U6BbjijMigQK","fecha_creacion":"2025-05-13 21:55:24"}
+ERROR - 2025-05-15 08:12:34 --> Columna contraseña_hash no encontrada en usuario: {"id":"3","nombre":"222","apellido":"222","correo":"2@2.com","contrasena":"$2y$10$WhHLBO.KRzYAsUPmVTiqGOGfsMtUga0Td\/.oemAV6U6BbjijMigQK","fecha_creacion":"2025-05-13 21:55:24"}
+DEBUG - 2025-05-15 08:12:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:12:35 --> Accediendo a Auth::login
+DEBUG - 2025-05-15 08:12:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:12:40 --> Accediendo a Auth::login
+DEBUG - 2025-05-15 08:12:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:12:41 --> Accediendo a Auth::login
+DEBUG - 2025-05-15 08:12:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:12:42 --> Accediendo a Auth::login
+DEBUG - 2025-05-15 08:12:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:12:43 --> Accediendo a Auth::login
+DEBUG - 2025-05-15 08:12:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:14:45 --> Accediendo a Auth::attemptLogin
+DEBUG - 2025-05-15 08:14:45 --> Datos recibidos: correo=2@2.com, password=provided
+DEBUG - 2025-05-15 08:14:45 --> Resultado de la consulta: user={"id":"3","nombre":"222","apellido":"222","correo":"2@2.com","contrasena":"$2y$10$WhHLBO.KRzYAsUPmVTiqGOGfsMtUga0Td\/.oemAV6U6BbjijMigQK","fecha_creacion":"2025-05-13 21:55:24"}
+ERROR - 2025-05-15 08:14:45 --> Columna contraseña_hash no encontrada en usuario: {"id":"3","nombre":"222","apellido":"222","correo":"2@2.com","contrasena":"$2y$10$WhHLBO.KRzYAsUPmVTiqGOGfsMtUga0Td\/.oemAV6U6BbjijMigQK","fecha_creacion":"2025-05-13 21:55:24"}
+DEBUG - 2025-05-15 08:14:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:18:16 --> Accediendo a SignupController::index
+DEBUG - 2025-05-15 08:18:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:18:36 --> Accediendo a Auth::login
+DEBUG - 2025-05-15 08:18:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:18:37 --> Accediendo a Auth::login
+DEBUG - 2025-05-15 08:18:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:18:43 --> Accediendo a Auth::attemptLogin
+DEBUG - 2025-05-15 08:18:43 --> Datos recibidos: correo=2@2.com, password=provided
+DEBUG - 2025-05-15 08:18:43 --> Resultado de la consulta: user={"id":"3","nombre":"222","apellido":"222","correo":"2@2.com","contrasena":"$2y$10$WhHLBO.KRzYAsUPmVTiqGOGfsMtUga0Td\/.oemAV6U6BbjijMigQK","fecha_creacion":"2025-05-13 21:55:24"}
+DEBUG - 2025-05-15 08:18:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:18:43 --> Inicio de sesión exitoso para: 2@2.com
+DEBUG - 2025-05-15 08:18:43 --> Redirigiendo a: profile (URL completa: http://localhost/framework-ci4/index.php/profile)
+DEBUG - 2025-05-15 08:18:43 --> Accediendo a UserController::profile
+DEBUG - 2025-05-15 08:18:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:18:59 --> Accediendo a Tasks::index
+DEBUG - 2025-05-15 08:18:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:18:59 --> User ID en sesión: 3
+DEBUG - 2025-05-15 08:18:59 --> Correo logueado: 2@2.com
+DEBUG - 2025-05-15 08:18:59 --> Tareas propias encontradas: 3
+DEBUG - 2025-05-15 08:18:59 --> Correo en sesión: 2@2.com
+DEBUG - 2025-05-15 08:18:59 --> Tareas compartidas encontradas: 0
+DEBUG - 2025-05-15 08:18:59 --> Total de tareas combinadas: 3
+DEBUG - 2025-05-15 08:19:28 --> Accediendo a SignupController::store
+DEBUG - 2025-05-15 08:19:28 --> Método HTTP detectado: POST
+DEBUG - 2025-05-15 08:19:28 --> Datos recibidos: Array
+(
+    [nombre] => admin
+    [apellido] => admin
+    [correo] => admin@admin.com
+    [contrasena] => 123456789
+)
+
+DEBUG - 2025-05-15 08:19:28 --> Datos POST confirmados
+ERROR - 2025-05-15 08:19:28 --> mysqli_sql_exception: Unknown column 'contraseña_hash' in 'field list' in G:\xampp\htdocs\framework-ci4\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 G:\xampp\htdocs\framework-ci4\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `us...', 0)
+#1 G:\xampp\htdocs\framework-ci4\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 G:\xampp\htdocs\framework-ci4\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 G:\xampp\htdocs\framework-ci4\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 G:\xampp\htdocs\framework-ci4\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 G:\xampp\htdocs\framework-ci4\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 G:\xampp\htdocs\framework-ci4\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, false)
+#7 G:\xampp\htdocs\framework-ci4\system\BaseModel.php(750): CodeIgniter\Model->insert(Array, false)
+#8 G:\xampp\htdocs\framework-ci4\app\Controllers\SignupController.php(54): CodeIgniter\BaseModel->save(Array)
+#9 G:\xampp\htdocs\framework-ci4\system\CodeIgniter.php(933): App\Controllers\SignupController->store()
+#10 G:\xampp\htdocs\framework-ci4\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+#11 G:\xampp\htdocs\framework-ci4\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 G:\xampp\htdocs\framework-ci4\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 G:\xampp\htdocs\framework-ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 G:\xampp\htdocs\framework-ci4\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-05-15 08:19:28 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'contraseña_hash' in 'field list'
+[Method: POST, Route: register]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (:correo:, :contraseña_hash:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\SignupController.php(54): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SignupController->store()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-15 08:19:28 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'contraseña_hash' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (\'admin@admin.com\', \'$2y$10$sAOor/InRD.eMX2YNr7tL.o9YI7tdNZlL.Cs3pYKaDI68LWCzuMRG\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (\'admin@admin.com\', \'$2y$10$sAOor/InRD.eMX2YNr7tL.o9YI7tdNZlL.Cs3pYKaDI68LWCzuMRG\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (:correo:, :contraseña_hash:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\SignupController.php(54): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SignupController->store()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-15 08:19:28 --> [Caused by] mysqli_sql_exception: Unknown column 'contraseña_hash' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (\'admin@admin.com\', \'$2y$10$sAOor/InRD.eMX2YNr7tL.o9YI7tdNZlL.Cs3pYKaDI68LWCzuMRG\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (\'admin@admin.com\', \'$2y$10$sAOor/InRD.eMX2YNr7tL.o9YI7tdNZlL.Cs3pYKaDI68LWCzuMRG\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (\'admin@admin.com\', \'$2y$10$sAOor/InRD.eMX2YNr7tL.o9YI7tdNZlL.Cs3pYKaDI68LWCzuMRG\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (:correo:, :contraseña_hash:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\SignupController.php(54): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SignupController->store()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-15 08:19:35 --> Accediendo a UserController::profile
+DEBUG - 2025-05-15 08:19:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:19:42 --> Accediendo a Tasks::index
+DEBUG - 2025-05-15 08:19:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:19:42 --> User ID en sesión: 3
+DEBUG - 2025-05-15 08:19:42 --> Correo logueado: 2@2.com
+DEBUG - 2025-05-15 08:19:42 --> Tareas propias encontradas: 3
+DEBUG - 2025-05-15 08:19:42 --> Correo en sesión: 2@2.com
+DEBUG - 2025-05-15 08:19:42 --> Tareas compartidas encontradas: 0
+DEBUG - 2025-05-15 08:19:42 --> Total de tareas combinadas: 3
+DEBUG - 2025-05-15 08:19:46 --> Accediendo a UserController::profile
+DEBUG - 2025-05-15 08:19:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:19:53 --> Accediendo a Tasks::archived
+DEBUG - 2025-05-15 08:19:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:19:53 --> User ID en sesión: 3
+DEBUG - 2025-05-15 08:19:53 --> Correo logueado: 2@2.com
+DEBUG - 2025-05-15 08:19:53 --> Tareas propias archivadas encontradas: 2
+DEBUG - 2025-05-15 08:19:53 --> Correo en sesión: 2@2.com
+DEBUG - 2025-05-15 08:19:53 --> Tareas compartidas archivadas encontradas: 2
+DEBUG - 2025-05-15 08:19:53 --> Total de tareas archivadas combinadas: 4
+DEBUG - 2025-05-15 08:19:56 --> Accediendo a UserController::profile
+DEBUG - 2025-05-15 08:19:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:19:59 --> Accediendo a Tasks::create
+DEBUG - 2025-05-15 08:19:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:20:02 --> Accediendo a UserController::profile
+DEBUG - 2025-05-15 08:20:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:20:28 --> Accediendo a Home::index
+DEBUG - 2025-05-15 08:20:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-15 08:20:28 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "home/index.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('home/index.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('home/index', [], true)
+ 3 APPPATH\Controllers\Home.php(13): view('home/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-15 08:20:34 --> Accediendo a Home::index
+DEBUG - 2025-05-15 08:20:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-15 08:20:34 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "home/index.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('home/index.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('home/index', [], true)
+ 3 APPPATH\Controllers\Home.php(13): view('home/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-15 08:20:55 --> Accediendo a Home::index
+DEBUG - 2025-05-15 08:20:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-15 08:20:55 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "home/index.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('home/index.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('home/index', [], true)
+ 3 APPPATH\Controllers\Home.php(13): view('home/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-15 08:21:07 --> Accediendo a Auth::login
+DEBUG - 2025-05-15 08:21:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:21:21 --> Accediendo a Tasks::index
+DEBUG - 2025-05-15 08:21:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:21:21 --> User ID en sesión: null
+ERROR - 2025-05-15 08:21:21 --> No hay usuario logueado
+DEBUG - 2025-05-15 08:21:21 --> Accediendo a Auth::login
+DEBUG - 2025-05-15 08:21:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:21:43 --> Accediendo a Auth::attemptLogin
+DEBUG - 2025-05-15 08:21:43 --> Datos recibidos: correo=999@999.com, password=provided
+DEBUG - 2025-05-15 08:21:43 --> Resultado de la consulta: user={"id":"1","nombre":"999","apellido":"999","correo":"999@999.com","contrasena":"$2y$10$wGnsPspK2bUR5myNL8Ov6efoU9Q3RZR4KxLg\/pZK0Ce8xJtpgIcge","fecha_creacion":"2025-05-13 16:10:27"}
+DEBUG - 2025-05-15 08:21:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:21:43 --> Inicio de sesión exitoso para: 999@999.com
+DEBUG - 2025-05-15 08:21:43 --> Redirigiendo a: profile (URL completa: http://localhost/framework-ci4/index.php/profile)
+DEBUG - 2025-05-15 08:21:43 --> Accediendo a UserController::profile
+DEBUG - 2025-05-15 08:21:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:21:57 --> Accediendo a Tasks::index
+DEBUG - 2025-05-15 08:21:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:21:57 --> User ID en sesión: 1
+DEBUG - 2025-05-15 08:21:57 --> Correo logueado: 999@999.com
+DEBUG - 2025-05-15 08:21:57 --> Tareas propias encontradas: 0
+DEBUG - 2025-05-15 08:21:57 --> Correo en sesión: 999@999.com
+DEBUG - 2025-05-15 08:21:57 --> Tareas compartidas encontradas: 1
+DEBUG - 2025-05-15 08:21:57 --> Total de tareas combinadas: 1
+DEBUG - 2025-05-15 08:23:44 --> Accediendo a UserController::profile
+DEBUG - 2025-05-15 08:23:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:23:45 --> Accediendo a SignupController::index
+DEBUG - 2025-05-15 08:23:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:24:23 --> Accediendo a UserController::profile
+DEBUG - 2025-05-15 08:24:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:24:23 --> Accediendo a SignupController::index
+DEBUG - 2025-05-15 08:24:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:24:26 --> Accediendo a UserController::profile
+DEBUG - 2025-05-15 08:24:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:25:02 --> Accediendo a UserController::profile
+DEBUG - 2025-05-15 08:25:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:25:03 --> Accediendo a SignupController::index
+DEBUG - 2025-05-15 08:25:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:25:46 --> Accediendo a Tasks::index
+DEBUG - 2025-05-15 08:25:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:25:46 --> User ID en sesión: 3
+DEBUG - 2025-05-15 08:25:46 --> Correo logueado: 2@2.com
+DEBUG - 2025-05-15 08:25:46 --> Tareas propias encontradas: 3
+DEBUG - 2025-05-15 08:25:46 --> Correo en sesión: 2@2.com
+DEBUG - 2025-05-15 08:25:46 --> Tareas compartidas encontradas: 0
+DEBUG - 2025-05-15 08:25:46 --> Total de tareas combinadas: 3
+DEBUG - 2025-05-15 08:25:52 --> Accediendo a UserController::profile
+DEBUG - 2025-05-15 08:25:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:25:59 --> Accediendo a Tasks::index
+DEBUG - 2025-05-15 08:25:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:25:59 --> User ID en sesión: 3
+DEBUG - 2025-05-15 08:25:59 --> Correo logueado: 2@2.com
+DEBUG - 2025-05-15 08:25:59 --> Tareas propias encontradas: 3
+DEBUG - 2025-05-15 08:25:59 --> Correo en sesión: 2@2.com
+DEBUG - 2025-05-15 08:25:59 --> Tareas compartidas encontradas: 0
+DEBUG - 2025-05-15 08:25:59 --> Total de tareas combinadas: 3
+DEBUG - 2025-05-15 08:26:05 --> Accediendo a Tasks::archived
+DEBUG - 2025-05-15 08:26:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:26:05 --> User ID en sesión: 3
+DEBUG - 2025-05-15 08:26:05 --> Correo logueado: 2@2.com
+DEBUG - 2025-05-15 08:26:05 --> Tareas propias archivadas encontradas: 2
+DEBUG - 2025-05-15 08:26:05 --> Correo en sesión: 2@2.com
+DEBUG - 2025-05-15 08:26:05 --> Tareas compartidas archivadas encontradas: 2
+DEBUG - 2025-05-15 08:26:05 --> Total de tareas archivadas combinadas: 4
+DEBUG - 2025-05-15 08:26:13 --> Accediendo a Tasks::index
+DEBUG - 2025-05-15 08:26:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:26:13 --> User ID en sesión: 3
+DEBUG - 2025-05-15 08:26:13 --> Correo logueado: 2@2.com
+DEBUG - 2025-05-15 08:26:13 --> Tareas propias encontradas: 3
+DEBUG - 2025-05-15 08:26:13 --> Correo en sesión: 2@2.com
+DEBUG - 2025-05-15 08:26:13 --> Tareas compartidas encontradas: 0
+DEBUG - 2025-05-15 08:26:13 --> Total de tareas combinadas: 3
+DEBUG - 2025-05-15 08:27:49 --> Accediendo a Tasks::index
+DEBUG - 2025-05-15 08:27:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:27:49 --> User ID en sesión: 3
+DEBUG - 2025-05-15 08:27:49 --> Correo logueado: 2@2.com
+DEBUG - 2025-05-15 08:27:49 --> Tareas propias encontradas: 3
+DEBUG - 2025-05-15 08:27:49 --> Correo en sesión: 2@2.com
+DEBUG - 2025-05-15 08:27:49 --> Tareas compartidas encontradas: 0
+DEBUG - 2025-05-15 08:27:49 --> Total de tareas combinadas: 3
+CRITICAL - 2025-05-15 08:27:49 --> ErrorException: Undefined variable $cabecera
+[Method: GET, Route: tasks]
+in APPPATH\Views\tasks\index.php on line 3.
+ 1 APPPATH\Views\tasks\index.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cabecera', 'G:\\xampp\\htdocs\\framework-ci4\\app\\Views\\tasks\\index.php', 3)
+ 2 SYSTEMPATH\View\View.php(224): include('G:\\xampp\\htdocs\\framework-ci4\\app\\Views\\tasks\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('tasks/index', [], true)
+ 5 APPPATH\Controllers\Tasks.php(100): view('tasks/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Tasks->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-15 08:27:49 --> Accediendo a SignupController::index
+DEBUG - 2025-05-15 08:27:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:27:56 --> Accediendo a UserController::profile
+DEBUG - 2025-05-15 08:27:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:28:00 --> Accediendo a Tasks::index
+DEBUG - 2025-05-15 08:28:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:28:00 --> User ID en sesión: 3
+DEBUG - 2025-05-15 08:28:00 --> Correo logueado: 2@2.com
+DEBUG - 2025-05-15 08:28:00 --> Tareas propias encontradas: 3
+DEBUG - 2025-05-15 08:28:00 --> Correo en sesión: 2@2.com
+DEBUG - 2025-05-15 08:28:00 --> Tareas compartidas encontradas: 0
+DEBUG - 2025-05-15 08:28:00 --> Total de tareas combinadas: 3
+CRITICAL - 2025-05-15 08:28:00 --> ErrorException: Undefined variable $cabecera
+[Method: GET, Route: tasks]
+in APPPATH\Views\tasks\index.php on line 3.
+ 1 APPPATH\Views\tasks\index.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cabecera', 'G:\\xampp\\htdocs\\framework-ci4\\app\\Views\\tasks\\index.php', 3)
+ 2 SYSTEMPATH\View\View.php(224): include('G:\\xampp\\htdocs\\framework-ci4\\app\\Views\\tasks\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('tasks/index', [], true)
+ 5 APPPATH\Controllers\Tasks.php(100): view('tasks/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Tasks->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-15 08:34:26 --> Accediendo a SignupController::index
+DEBUG - 2025-05-15 08:34:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:34:30 --> Accediendo a UserController::profile
+DEBUG - 2025-05-15 08:34:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:34:32 --> Accediendo a Tasks::index
+DEBUG - 2025-05-15 08:34:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:34:32 --> User ID en sesión: 3
+DEBUG - 2025-05-15 08:34:32 --> Correo logueado: 2@2.com
+DEBUG - 2025-05-15 08:34:32 --> Tareas propias encontradas: 3
+DEBUG - 2025-05-15 08:34:32 --> Correo en sesión: 2@2.com
+DEBUG - 2025-05-15 08:34:32 --> Tareas compartidas encontradas: 0
+DEBUG - 2025-05-15 08:34:32 --> Total de tareas combinadas: 3
+DEBUG - 2025-05-15 08:35:33 --> Accediendo a Tasks::index
+DEBUG - 2025-05-15 08:35:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:35:33 --> User ID en sesión: 3
+DEBUG - 2025-05-15 08:35:33 --> Correo logueado: 2@2.com
+DEBUG - 2025-05-15 08:35:33 --> Tareas propias encontradas: 3
+DEBUG - 2025-05-15 08:35:33 --> Correo en sesión: 2@2.com
+DEBUG - 2025-05-15 08:35:33 --> Tareas compartidas encontradas: 0
+DEBUG - 2025-05-15 08:35:33 --> Total de tareas combinadas: 3
+DEBUG - 2025-05-15 08:49:51 --> Accediendo a SignupController::index
+DEBUG - 2025-05-15 08:49:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:49:51 --> Accediendo a Tasks::index
+DEBUG - 2025-05-15 08:49:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:49:51 --> User ID en sesión: 3
+DEBUG - 2025-05-15 08:49:51 --> Correo logueado: 2@2.com
+DEBUG - 2025-05-15 08:49:51 --> Tareas propias encontradas: 3
+DEBUG - 2025-05-15 08:49:51 --> Correo en sesión: 2@2.com
+DEBUG - 2025-05-15 08:49:51 --> Tareas compartidas encontradas: 0
+DEBUG - 2025-05-15 08:49:51 --> Total de tareas combinadas: 3
+DEBUG - 2025-05-15 08:49:55 --> Accediendo a Tasks::index
+DEBUG - 2025-05-15 08:49:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:49:55 --> User ID en sesión: 3
+DEBUG - 2025-05-15 08:49:55 --> Correo logueado: 2@2.com
+DEBUG - 2025-05-15 08:49:55 --> Tareas propias encontradas: 3
+DEBUG - 2025-05-15 08:49:55 --> Correo en sesión: 2@2.com
+DEBUG - 2025-05-15 08:49:55 --> Tareas compartidas encontradas: 0
+DEBUG - 2025-05-15 08:49:55 --> Total de tareas combinadas: 3
+DEBUG - 2025-05-15 08:50:00 --> Accediendo a SignupController::index
+DEBUG - 2025-05-15 08:50:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:50:06 --> Accediendo a Tasks::index
+DEBUG - 2025-05-15 08:50:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:50:06 --> User ID en sesión: 3
+DEBUG - 2025-05-15 08:50:06 --> Correo logueado: 2@2.com
+DEBUG - 2025-05-15 08:50:06 --> Tareas propias encontradas: 3
+DEBUG - 2025-05-15 08:50:06 --> Correo en sesión: 2@2.com
+DEBUG - 2025-05-15 08:50:06 --> Tareas compartidas encontradas: 0
+DEBUG - 2025-05-15 08:50:06 --> Total de tareas combinadas: 3
+DEBUG - 2025-05-15 08:57:43 --> Accediendo a Tasks::index
+DEBUG - 2025-05-15 08:57:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:57:43 --> User ID en sesión: 3
+DEBUG - 2025-05-15 08:57:43 --> Correo logueado: 2@2.com
+DEBUG - 2025-05-15 08:57:43 --> Tareas propias encontradas: 3
+DEBUG - 2025-05-15 08:57:43 --> Correo en sesión: 2@2.com
+DEBUG - 2025-05-15 08:57:43 --> Tareas compartidas encontradas: 0
+DEBUG - 2025-05-15 08:57:43 --> Total de tareas combinadas: 3
+CRITICAL - 2025-05-15 08:57:43 --> CodeIgniter\Exceptions\RuntimeException: View themes, no current section.
+[Method: GET, Route: tasks]
+in SYSTEMPATH\View\View.php on line 430.
+ 1 APPPATH\Views\tasks\index.php(131): CodeIgniter\View\View->endSection()
+ 2 SYSTEMPATH\View\View.php(224): include('G:\\xampp\\htdocs\\framework-ci4\\app\\Views\\tasks\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('tasks/index', [], true)
+ 5 APPPATH\Controllers\Tasks.php(102): view('tasks/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Tasks->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-15 08:57:43 --> Accediendo a Tasks::index
+DEBUG - 2025-05-15 08:57:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:57:43 --> User ID en sesión: 3
+DEBUG - 2025-05-15 08:57:43 --> Correo logueado: 2@2.com
+DEBUG - 2025-05-15 08:57:43 --> Tareas propias encontradas: 3
+DEBUG - 2025-05-15 08:57:43 --> Correo en sesión: 2@2.com
+DEBUG - 2025-05-15 08:57:43 --> Tareas compartidas encontradas: 0
+DEBUG - 2025-05-15 08:57:43 --> Total de tareas combinadas: 3
+CRITICAL - 2025-05-15 08:57:43 --> CodeIgniter\Exceptions\RuntimeException: View themes, no current section.
+[Method: GET, Route: tasks]
+in SYSTEMPATH\View\View.php on line 430.
+ 1 APPPATH\Views\tasks\index.php(131): CodeIgniter\View\View->endSection()
+ 2 SYSTEMPATH\View\View.php(224): include('G:\\xampp\\htdocs\\framework-ci4\\app\\Views\\tasks\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('tasks/index', [], true)
+ 5 APPPATH\Controllers\Tasks.php(102): view('tasks/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Tasks->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-15 08:57:48 --> Accediendo a UserController::profile
+DEBUG - 2025-05-15 08:57:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:57:50 --> Accediendo a Tasks::index
+DEBUG - 2025-05-15 08:57:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:57:50 --> User ID en sesión: 3
+DEBUG - 2025-05-15 08:57:50 --> Correo logueado: 2@2.com
+DEBUG - 2025-05-15 08:57:50 --> Tareas propias encontradas: 3
+DEBUG - 2025-05-15 08:57:50 --> Correo en sesión: 2@2.com
+DEBUG - 2025-05-15 08:57:50 --> Tareas compartidas encontradas: 0
+DEBUG - 2025-05-15 08:57:50 --> Total de tareas combinadas: 3
+CRITICAL - 2025-05-15 08:57:50 --> CodeIgniter\Exceptions\RuntimeException: View themes, no current section.
+[Method: GET, Route: tasks]
+in SYSTEMPATH\View\View.php on line 430.
+ 1 APPPATH\Views\tasks\index.php(131): CodeIgniter\View\View->endSection()
+ 2 SYSTEMPATH\View\View.php(224): include('G:\\xampp\\htdocs\\framework-ci4\\app\\Views\\tasks\\index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('tasks/index', [], true)
+ 5 APPPATH\Controllers\Tasks.php(102): view('tasks/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Tasks->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-15 08:58:02 --> Accediendo a UserController::profile
+DEBUG - 2025-05-15 08:58:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:58:03 --> Accediendo a Tasks::index
+DEBUG - 2025-05-15 08:58:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:58:03 --> User ID en sesión: 3
+DEBUG - 2025-05-15 08:58:03 --> Correo logueado: 2@2.com
+DEBUG - 2025-05-15 08:58:03 --> Tareas propias encontradas: 3
+DEBUG - 2025-05-15 08:58:03 --> Correo en sesión: 2@2.com
+DEBUG - 2025-05-15 08:58:03 --> Tareas compartidas encontradas: 0
+DEBUG - 2025-05-15 08:58:03 --> Total de tareas combinadas: 3
+DEBUG - 2025-05-15 08:58:13 --> Accediendo a Tasks::archived
+DEBUG - 2025-05-15 08:58:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:58:13 --> User ID en sesión: 3
+DEBUG - 2025-05-15 08:58:13 --> Correo logueado: 2@2.com
+DEBUG - 2025-05-15 08:58:13 --> Tareas propias archivadas encontradas: 2
+DEBUG - 2025-05-15 08:58:13 --> Correo en sesión: 2@2.com
+DEBUG - 2025-05-15 08:58:13 --> Tareas compartidas archivadas encontradas: 2
+DEBUG - 2025-05-15 08:58:13 --> Total de tareas archivadas combinadas: 4
+DEBUG - 2025-05-15 08:58:16 --> Accediendo a Tasks::index
+DEBUG - 2025-05-15 08:58:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:58:16 --> User ID en sesión: 3
+DEBUG - 2025-05-15 08:58:16 --> Correo logueado: 2@2.com
+DEBUG - 2025-05-15 08:58:16 --> Tareas propias encontradas: 3
+DEBUG - 2025-05-15 08:58:16 --> Correo en sesión: 2@2.com
+DEBUG - 2025-05-15 08:58:16 --> Tareas compartidas encontradas: 0
+DEBUG - 2025-05-15 08:58:16 --> Total de tareas combinadas: 3
+DEBUG - 2025-05-15 08:58:59 --> Accediendo a SignupController::index
+DEBUG - 2025-05-15 08:58:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:59:03 --> Accediendo a Tasks::index
+DEBUG - 2025-05-15 08:59:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:59:03 --> User ID en sesión: 3
+DEBUG - 2025-05-15 08:59:03 --> Correo logueado: 2@2.com
+DEBUG - 2025-05-15 08:59:03 --> Tareas propias encontradas: 3
+DEBUG - 2025-05-15 08:59:03 --> Correo en sesión: 2@2.com
+DEBUG - 2025-05-15 08:59:03 --> Tareas compartidas encontradas: 0
+DEBUG - 2025-05-15 08:59:03 --> Total de tareas combinadas: 3
+DEBUG - 2025-05-15 08:59:10 --> Accediendo a SignupController::store
+DEBUG - 2025-05-15 08:59:10 --> Método HTTP detectado: POST
+DEBUG - 2025-05-15 08:59:10 --> Datos recibidos: Array
+(
+    [nombre] => admin
+    [apellido] => admin
+    [correo] => admin@admin.com
+    [contrasena] => 123456789
+)
+
+DEBUG - 2025-05-15 08:59:10 --> Datos POST confirmados
+ERROR - 2025-05-15 08:59:10 --> mysqli_sql_exception: Unknown column 'contraseña_hash' in 'field list' in G:\xampp\htdocs\framework-ci4\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 G:\xampp\htdocs\framework-ci4\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `us...', 0)
+#1 G:\xampp\htdocs\framework-ci4\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 G:\xampp\htdocs\framework-ci4\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 G:\xampp\htdocs\framework-ci4\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 G:\xampp\htdocs\framework-ci4\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 G:\xampp\htdocs\framework-ci4\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 G:\xampp\htdocs\framework-ci4\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, false)
+#7 G:\xampp\htdocs\framework-ci4\system\BaseModel.php(750): CodeIgniter\Model->insert(Array, false)
+#8 G:\xampp\htdocs\framework-ci4\app\Controllers\SignupController.php(54): CodeIgniter\BaseModel->save(Array)
+#9 G:\xampp\htdocs\framework-ci4\system\CodeIgniter.php(933): App\Controllers\SignupController->store()
+#10 G:\xampp\htdocs\framework-ci4\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+#11 G:\xampp\htdocs\framework-ci4\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 G:\xampp\htdocs\framework-ci4\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 G:\xampp\htdocs\framework-ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 G:\xampp\htdocs\framework-ci4\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-05-15 08:59:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'contraseña_hash' in 'field list'
+[Method: POST, Route: register]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (:correo:, :contraseña_hash:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\SignupController.php(54): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SignupController->store()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-15 08:59:10 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'contraseña_hash' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (\'admin@admin.com\', \'$2y$10$ORrfwk8aJkoYWjT1dzw/hudNEYghiE76uAO02Vm9jzjqwrmh6tK/W\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (\'admin@admin.com\', \'$2y$10$ORrfwk8aJkoYWjT1dzw/hudNEYghiE76uAO02Vm9jzjqwrmh6tK/W\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (:correo:, :contraseña_hash:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\SignupController.php(54): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SignupController->store()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-15 08:59:10 --> [Caused by] mysqli_sql_exception: Unknown column 'contraseña_hash' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (\'admin@admin.com\', \'$2y$10$ORrfwk8aJkoYWjT1dzw/hudNEYghiE76uAO02Vm9jzjqwrmh6tK/W\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (\'admin@admin.com\', \'$2y$10$ORrfwk8aJkoYWjT1dzw/hudNEYghiE76uAO02Vm9jzjqwrmh6tK/W\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (\'admin@admin.com\', \'$2y$10$ORrfwk8aJkoYWjT1dzw/hudNEYghiE76uAO02Vm9jzjqwrmh6tK/W\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (:correo:, :contraseña_hash:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\SignupController.php(54): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SignupController->store()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-15 08:59:16 --> Accediendo a SignupController::index
+DEBUG - 2025-05-15 08:59:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:59:22 --> Accediendo a Tasks::index
+DEBUG - 2025-05-15 08:59:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 08:59:22 --> User ID en sesión: 3
+DEBUG - 2025-05-15 08:59:22 --> Correo logueado: 2@2.com
+DEBUG - 2025-05-15 08:59:22 --> Tareas propias encontradas: 3
+DEBUG - 2025-05-15 08:59:22 --> Correo en sesión: 2@2.com
+DEBUG - 2025-05-15 08:59:22 --> Tareas compartidas encontradas: 0
+DEBUG - 2025-05-15 08:59:22 --> Total de tareas combinadas: 3
+DEBUG - 2025-05-15 09:01:25 --> Accediendo a Tasks::index
+DEBUG - 2025-05-15 09:01:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 09:01:25 --> User ID en sesión: 3
+DEBUG - 2025-05-15 09:01:25 --> Correo logueado: 2@2.com
+DEBUG - 2025-05-15 09:01:25 --> Tareas propias encontradas: 3
+DEBUG - 2025-05-15 09:01:25 --> Correo en sesión: 2@2.com
+DEBUG - 2025-05-15 09:01:25 --> Tareas compartidas encontradas: 0
+DEBUG - 2025-05-15 09:01:25 --> Total de tareas combinadas: 3
+DEBUG - 2025-05-15 09:01:25 --> Accediendo a Tasks::index
+DEBUG - 2025-05-15 09:01:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 09:01:25 --> User ID en sesión: 3
+DEBUG - 2025-05-15 09:01:25 --> Correo logueado: 2@2.com
+DEBUG - 2025-05-15 09:01:25 --> Tareas propias encontradas: 3
+DEBUG - 2025-05-15 09:01:25 --> Correo en sesión: 2@2.com
+DEBUG - 2025-05-15 09:01:25 --> Tareas compartidas encontradas: 0
+DEBUG - 2025-05-15 09:01:25 --> Total de tareas combinadas: 3
+DEBUG - 2025-05-15 09:01:38 --> Accediendo a Tasks::index
+DEBUG - 2025-05-15 09:01:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 09:01:38 --> User ID en sesión: 3
+DEBUG - 2025-05-15 09:01:38 --> Correo logueado: 2@2.com
+DEBUG - 2025-05-15 09:01:38 --> Tareas propias encontradas: 3
+DEBUG - 2025-05-15 09:01:38 --> Correo en sesión: 2@2.com
+DEBUG - 2025-05-15 09:01:38 --> Tareas compartidas encontradas: 0
+DEBUG - 2025-05-15 09:01:38 --> Total de tareas combinadas: 3
+DEBUG - 2025-05-15 09:01:42 --> Accediendo a Tasks::archived
+DEBUG - 2025-05-15 09:01:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 09:01:42 --> User ID en sesión: 3
+DEBUG - 2025-05-15 09:01:42 --> Correo logueado: 2@2.com
+DEBUG - 2025-05-15 09:01:42 --> Tareas propias archivadas encontradas: 2
+DEBUG - 2025-05-15 09:01:42 --> Correo en sesión: 2@2.com
+DEBUG - 2025-05-15 09:01:42 --> Tareas compartidas archivadas encontradas: 2
+DEBUG - 2025-05-15 09:01:42 --> Total de tareas archivadas combinadas: 4
+DEBUG - 2025-05-15 09:01:44 --> Accediendo a Tasks::index
+DEBUG - 2025-05-15 09:01:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 09:01:44 --> User ID en sesión: 3
+DEBUG - 2025-05-15 09:01:44 --> Correo logueado: 2@2.com
+DEBUG - 2025-05-15 09:01:44 --> Tareas propias encontradas: 3
+DEBUG - 2025-05-15 09:01:44 --> Correo en sesión: 2@2.com
+DEBUG - 2025-05-15 09:01:44 --> Tareas compartidas encontradas: 0
+DEBUG - 2025-05-15 09:01:44 --> Total de tareas combinadas: 3
+DEBUG - 2025-05-15 09:01:47 --> Accediendo a Tasks::create
+DEBUG - 2025-05-15 09:01:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 09:01:50 --> Accediendo a Tasks::index
+DEBUG - 2025-05-15 09:01:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 09:01:50 --> User ID en sesión: 3
+DEBUG - 2025-05-15 09:01:50 --> Correo logueado: 2@2.com
+DEBUG - 2025-05-15 09:01:50 --> Tareas propias encontradas: 3
+DEBUG - 2025-05-15 09:01:50 --> Correo en sesión: 2@2.com
+DEBUG - 2025-05-15 09:01:50 --> Tareas compartidas encontradas: 0
+DEBUG - 2025-05-15 09:01:50 --> Total de tareas combinadas: 3
+DEBUG - 2025-05-15 09:02:00 --> Accediendo a Tasks::archived
+DEBUG - 2025-05-15 09:02:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 09:02:00 --> User ID en sesión: 3
+DEBUG - 2025-05-15 09:02:00 --> Correo logueado: 2@2.com
+DEBUG - 2025-05-15 09:02:00 --> Tareas propias archivadas encontradas: 2
+DEBUG - 2025-05-15 09:02:00 --> Correo en sesión: 2@2.com
+DEBUG - 2025-05-15 09:02:00 --> Tareas compartidas archivadas encontradas: 2
+DEBUG - 2025-05-15 09:02:00 --> Total de tareas archivadas combinadas: 4
+DEBUG - 2025-05-15 09:14:05 --> Accediendo a Tasks::index
+DEBUG - 2025-05-15 09:14:05 --> Accediendo a Tasks::archived
+DEBUG - 2025-05-15 09:14:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 09:14:05 --> User ID en sesión: 3
+DEBUG - 2025-05-15 09:14:05 --> Correo logueado: 2@2.com
+DEBUG - 2025-05-15 09:14:05 --> Tareas propias encontradas: 3
+DEBUG - 2025-05-15 09:14:05 --> Correo en sesión: 2@2.com
+DEBUG - 2025-05-15 09:14:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 09:14:05 --> User ID en sesión: 3
+DEBUG - 2025-05-15 09:14:05 --> Correo logueado: 2@2.com
+DEBUG - 2025-05-15 09:14:05 --> Tareas propias archivadas encontradas: 2
+DEBUG - 2025-05-15 09:14:05 --> Correo en sesión: 2@2.com
+DEBUG - 2025-05-15 09:14:05 --> Tareas compartidas encontradas: 0
+DEBUG - 2025-05-15 09:14:05 --> Tareas compartidas archivadas encontradas: 2
+DEBUG - 2025-05-15 09:14:05 --> Total de tareas combinadas: 3
+DEBUG - 2025-05-15 09:14:05 --> Total de tareas archivadas combinadas: 4
+CRITICAL - 2025-05-15 09:14:05 --> ErrorException: Undefined variable $cabecera
+[Method: GET, Route: tasks/archived]
+in APPPATH\Views\tasks\archived.php on line 1.
+ 1 APPPATH\Views\tasks\archived.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cabecera', 'G:\\xampp\\htdocs\\framework-ci4\\app\\Views\\tasks\\archived.php', 1)
+ 2 SYSTEMPATH\View\View.php(224): include('G:\\xampp\\htdocs\\framework-ci4\\app\\Views\\tasks\\archived.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('tasks/archived', [], true)
+ 5 APPPATH\Controllers\Tasks.php(177): view('tasks/archived', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Tasks->archived()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-15 09:14:10 --> Accediendo a Tasks::archived
+DEBUG - 2025-05-15 09:14:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 09:14:10 --> User ID en sesión: 3
+DEBUG - 2025-05-15 09:14:10 --> Correo logueado: 2@2.com
+DEBUG - 2025-05-15 09:14:10 --> Tareas propias archivadas encontradas: 2
+DEBUG - 2025-05-15 09:14:10 --> Correo en sesión: 2@2.com
+DEBUG - 2025-05-15 09:14:10 --> Tareas compartidas archivadas encontradas: 2
+DEBUG - 2025-05-15 09:14:10 --> Total de tareas archivadas combinadas: 4
+CRITICAL - 2025-05-15 09:14:10 --> ErrorException: Undefined variable $cabecera
+[Method: GET, Route: tasks/archived]
+in APPPATH\Views\tasks\archived.php on line 1.
+ 1 APPPATH\Views\tasks\archived.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cabecera', 'G:\\xampp\\htdocs\\framework-ci4\\app\\Views\\tasks\\archived.php', 1)
+ 2 SYSTEMPATH\View\View.php(224): include('G:\\xampp\\htdocs\\framework-ci4\\app\\Views\\tasks\\archived.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('tasks/archived', [], true)
+ 5 APPPATH\Controllers\Tasks.php(177): view('tasks/archived', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Tasks->archived()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-15 09:16:39 --> Accediendo a Tasks::archived
+DEBUG - 2025-05-15 09:16:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 09:16:39 --> User ID en sesión: 3
+DEBUG - 2025-05-15 09:16:39 --> Correo logueado: 2@2.com
+DEBUG - 2025-05-15 09:16:39 --> Tareas propias archivadas encontradas: 2
+DEBUG - 2025-05-15 09:16:39 --> Correo en sesión: 2@2.com
+DEBUG - 2025-05-15 09:16:40 --> Tareas compartidas archivadas encontradas: 2
+DEBUG - 2025-05-15 09:16:40 --> Total de tareas archivadas combinadas: 4
+CRITICAL - 2025-05-15 09:16:40 --> ErrorException: Undefined variable $cabecera
+[Method: GET, Route: tasks/archived]
+in APPPATH\Views\tasks\archived.php on line 1.
+ 1 APPPATH\Views\tasks\archived.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cabecera', 'G:\\xampp\\htdocs\\framework-ci4\\app\\Views\\tasks\\archived.php', 1)
+ 2 SYSTEMPATH\View\View.php(224): include('G:\\xampp\\htdocs\\framework-ci4\\app\\Views\\tasks\\archived.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('tasks/archived', [], true)
+ 5 APPPATH\Controllers\Tasks.php(178): view('tasks/archived', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Tasks->archived()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-15 09:16:42 --> Accediendo a Tasks::archived
+DEBUG - 2025-05-15 09:16:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 09:16:42 --> User ID en sesión: 3
+DEBUG - 2025-05-15 09:16:42 --> Correo logueado: 2@2.com
+DEBUG - 2025-05-15 09:16:43 --> Tareas propias archivadas encontradas: 2
+DEBUG - 2025-05-15 09:16:43 --> Correo en sesión: 2@2.com
+DEBUG - 2025-05-15 09:16:43 --> Tareas compartidas archivadas encontradas: 2
+DEBUG - 2025-05-15 09:16:43 --> Total de tareas archivadas combinadas: 4
+CRITICAL - 2025-05-15 09:16:43 --> ErrorException: Undefined variable $cabecera
+[Method: GET, Route: tasks/archived]
+in APPPATH\Views\tasks\archived.php on line 1.
+ 1 APPPATH\Views\tasks\archived.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cabecera', 'G:\\xampp\\htdocs\\framework-ci4\\app\\Views\\tasks\\archived.php', 1)
+ 2 SYSTEMPATH\View\View.php(224): include('G:\\xampp\\htdocs\\framework-ci4\\app\\Views\\tasks\\archived.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('tasks/archived', [], true)
+ 5 APPPATH\Controllers\Tasks.php(178): view('tasks/archived', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Tasks->archived()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-15 09:16:43 --> Accediendo a Tasks::index
+DEBUG - 2025-05-15 09:16:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 09:16:43 --> User ID en sesión: 3
+DEBUG - 2025-05-15 09:16:43 --> Correo logueado: 2@2.com
+DEBUG - 2025-05-15 09:16:43 --> Tareas propias encontradas: 3
+DEBUG - 2025-05-15 09:16:43 --> Correo en sesión: 2@2.com
+DEBUG - 2025-05-15 09:16:43 --> Tareas compartidas encontradas: 0
+DEBUG - 2025-05-15 09:16:43 --> Total de tareas combinadas: 3
+DEBUG - 2025-05-15 09:16:47 --> Accediendo a Tasks::archived
+DEBUG - 2025-05-15 09:16:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 09:16:47 --> User ID en sesión: 3
+DEBUG - 2025-05-15 09:16:47 --> Correo logueado: 2@2.com
+DEBUG - 2025-05-15 09:16:47 --> Tareas propias archivadas encontradas: 2
+DEBUG - 2025-05-15 09:16:47 --> Correo en sesión: 2@2.com
+DEBUG - 2025-05-15 09:16:47 --> Tareas compartidas archivadas encontradas: 2
+DEBUG - 2025-05-15 09:16:47 --> Total de tareas archivadas combinadas: 4
+CRITICAL - 2025-05-15 09:16:47 --> ErrorException: Undefined variable $cabecera
+[Method: GET, Route: tasks/archived]
+in APPPATH\Views\tasks\archived.php on line 1.
+ 1 APPPATH\Views\tasks\archived.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cabecera', 'G:\\xampp\\htdocs\\framework-ci4\\app\\Views\\tasks\\archived.php', 1)
+ 2 SYSTEMPATH\View\View.php(224): include('G:\\xampp\\htdocs\\framework-ci4\\app\\Views\\tasks\\archived.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('tasks/archived', [], true)
+ 5 APPPATH\Controllers\Tasks.php(178): view('tasks/archived', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Tasks->archived()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-15 09:18:29 --> Accediendo a Tasks::archived
+DEBUG - 2025-05-15 09:18:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 09:18:29 --> User ID en sesión: 3
+DEBUG - 2025-05-15 09:18:29 --> Correo logueado: 2@2.com
+DEBUG - 2025-05-15 09:18:29 --> Tareas propias archivadas encontradas: 2
+DEBUG - 2025-05-15 09:18:29 --> Correo en sesión: 2@2.com
+DEBUG - 2025-05-15 09:18:30 --> Tareas compartidas archivadas encontradas: 2
+DEBUG - 2025-05-15 09:18:30 --> Total de tareas archivadas combinadas: 4
+CRITICAL - 2025-05-15 09:18:30 --> ErrorException: Undefined variable $cabecera
+[Method: GET, Route: tasks/archived]
+in APPPATH\Views\tasks\archived.php on line 1.
+ 1 APPPATH\Views\tasks\archived.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cabecera', 'G:\\xampp\\htdocs\\framework-ci4\\app\\Views\\tasks\\archived.php', 1)
+ 2 SYSTEMPATH\View\View.php(224): include('G:\\xampp\\htdocs\\framework-ci4\\app\\Views\\tasks\\archived.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('tasks/archived', [], true)
+ 5 APPPATH\Controllers\Tasks.php(178): view('tasks/archived', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Tasks->archived()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-15 09:18:31 --> Accediendo a Tasks::archived
+DEBUG - 2025-05-15 09:18:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 09:18:31 --> User ID en sesión: 3
+DEBUG - 2025-05-15 09:18:31 --> Correo logueado: 2@2.com
+DEBUG - 2025-05-15 09:18:31 --> Tareas propias archivadas encontradas: 2
+DEBUG - 2025-05-15 09:18:31 --> Correo en sesión: 2@2.com
+DEBUG - 2025-05-15 09:18:31 --> Tareas compartidas archivadas encontradas: 2
+DEBUG - 2025-05-15 09:18:31 --> Total de tareas archivadas combinadas: 4
+CRITICAL - 2025-05-15 09:18:31 --> ErrorException: Undefined variable $cabecera
+[Method: GET, Route: tasks/archived]
+in APPPATH\Views\tasks\archived.php on line 1.
+ 1 APPPATH\Views\tasks\archived.php(1): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cabecera', 'G:\\xampp\\htdocs\\framework-ci4\\app\\Views\\tasks\\archived.php', 1)
+ 2 SYSTEMPATH\View\View.php(224): include('G:\\xampp\\htdocs\\framework-ci4\\app\\Views\\tasks\\archived.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('tasks/archived', [], true)
+ 5 APPPATH\Controllers\Tasks.php(178): view('tasks/archived', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Tasks->archived()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Tasks))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-15 09:23:18 --> Accediendo a Tasks::archived
+DEBUG - 2025-05-15 09:23:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 09:23:18 --> User ID en sesión: 3
+DEBUG - 2025-05-15 09:23:18 --> Correo logueado: 2@2.com
+DEBUG - 2025-05-15 09:23:18 --> Tareas propias archivadas encontradas: 2
+DEBUG - 2025-05-15 09:23:18 --> Correo en sesión: 2@2.com
+DEBUG - 2025-05-15 09:23:18 --> Tareas compartidas archivadas encontradas: 2
+DEBUG - 2025-05-15 09:23:18 --> Total de tareas archivadas combinadas: 4
+DEBUG - 2025-05-15 09:23:24 --> Accediendo a Tasks::archived
+DEBUG - 2025-05-15 09:23:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 09:23:24 --> User ID en sesión: 3
+DEBUG - 2025-05-15 09:23:24 --> Correo logueado: 2@2.com
+DEBUG - 2025-05-15 09:23:24 --> Tareas propias archivadas encontradas: 2
+DEBUG - 2025-05-15 09:23:24 --> Correo en sesión: 2@2.com
+DEBUG - 2025-05-15 09:23:24 --> Tareas compartidas archivadas encontradas: 2
+DEBUG - 2025-05-15 09:23:24 --> Total de tareas archivadas combinadas: 4
+DEBUG - 2025-05-15 09:23:45 --> Accediendo a Tasks::create
+DEBUG - 2025-05-15 09:23:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 09:24:10 --> Accediendo a Tasks::create
+DEBUG - 2025-05-15 09:24:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 09:24:10 --> Accediendo a Tasks::archived
+DEBUG - 2025-05-15 09:24:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 09:24:10 --> User ID en sesión: 3
+DEBUG - 2025-05-15 09:24:10 --> Correo logueado: 2@2.com
+DEBUG - 2025-05-15 09:24:11 --> Tareas propias archivadas encontradas: 2
+DEBUG - 2025-05-15 09:24:11 --> Correo en sesión: 2@2.com
+DEBUG - 2025-05-15 09:24:11 --> Tareas compartidas archivadas encontradas: 2
+DEBUG - 2025-05-15 09:24:11 --> Total de tareas archivadas combinadas: 4
+DEBUG - 2025-05-15 09:24:13 --> Accediendo a Tasks::create
+DEBUG - 2025-05-15 09:24:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 09:24:18 --> Accediendo a Tasks::archived
+DEBUG - 2025-05-15 09:24:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 09:24:18 --> User ID en sesión: 3
+DEBUG - 2025-05-15 09:24:18 --> Correo logueado: 2@2.com
+DEBUG - 2025-05-15 09:24:18 --> Tareas propias archivadas encontradas: 2
+DEBUG - 2025-05-15 09:24:18 --> Correo en sesión: 2@2.com
+DEBUG - 2025-05-15 09:24:18 --> Tareas compartidas archivadas encontradas: 2
+DEBUG - 2025-05-15 09:24:18 --> Total de tareas archivadas combinadas: 4
+DEBUG - 2025-05-15 09:24:21 --> Accediendo a Tasks::create
+DEBUG - 2025-05-15 09:24:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 09:25:25 --> Accediendo a Tasks::create
+DEBUG - 2025-05-15 09:25:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 09:25:25 --> Accediendo a Tasks::create
+DEBUG - 2025-05-15 09:25:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 09:25:33 --> Accediendo a Tasks::archived
+DEBUG - 2025-05-15 09:25:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 09:25:33 --> User ID en sesión: 3
+DEBUG - 2025-05-15 09:25:33 --> Correo logueado: 2@2.com
+DEBUG - 2025-05-15 09:25:33 --> Tareas propias archivadas encontradas: 2
+DEBUG - 2025-05-15 09:25:33 --> Correo en sesión: 2@2.com
+DEBUG - 2025-05-15 09:25:33 --> Tareas compartidas archivadas encontradas: 2
+DEBUG - 2025-05-15 09:25:33 --> Total de tareas archivadas combinadas: 4
+DEBUG - 2025-05-15 09:25:35 --> Accediendo a Tasks::create
+DEBUG - 2025-05-15 09:25:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 09:30:15 --> Accediendo a UserController::profile
+DEBUG - 2025-05-15 09:30:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 09:30:19 --> Accediendo a Tasks::archived
+DEBUG - 2025-05-15 09:30:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 09:30:19 --> User ID en sesión: 1
+DEBUG - 2025-05-15 09:30:19 --> Correo logueado: 999@999.com
+DEBUG - 2025-05-15 09:30:19 --> Tareas propias archivadas encontradas: 4
+DEBUG - 2025-05-15 09:30:19 --> Correo en sesión: 999@999.com
+DEBUG - 2025-05-15 09:30:19 --> Tareas compartidas archivadas encontradas: 1
+DEBUG - 2025-05-15 09:30:19 --> Total de tareas archivadas combinadas: 5
+DEBUG - 2025-05-15 09:30:22 --> Accediendo a Tasks::index
+DEBUG - 2025-05-15 09:30:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 09:30:22 --> User ID en sesión: 1
+DEBUG - 2025-05-15 09:30:22 --> Correo logueado: 999@999.com
+DEBUG - 2025-05-15 09:30:22 --> Tareas propias encontradas: 0
+DEBUG - 2025-05-15 09:30:22 --> Correo en sesión: 999@999.com
+DEBUG - 2025-05-15 09:30:22 --> Tareas compartidas encontradas: 1
+DEBUG - 2025-05-15 09:30:22 --> Total de tareas combinadas: 1
+DEBUG - 2025-05-15 09:30:25 --> Accediendo a Tasks::create
+DEBUG - 2025-05-15 09:30:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 11:50:25 --> Accediendo a Tasks::index
+DEBUG - 2025-05-15 11:50:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 11:50:25 --> User ID en sesión: null
+ERROR - 2025-05-15 11:50:25 --> No hay usuario logueado
+DEBUG - 2025-05-15 11:50:25 --> Accediendo a Auth::login
+DEBUG - 2025-05-15 11:50:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 13:20:01 --> Accediendo a SignupController::index
+DEBUG - 2025-05-15 13:20:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 13:20:30 --> Accediendo a SignupController::store
+DEBUG - 2025-05-15 13:20:30 --> Método HTTP detectado: POST
+DEBUG - 2025-05-15 13:20:30 --> Datos recibidos: Array
+(
+    [nombre] => Alfredo
+    [apellido] => Galván
+    [correo] => alf@gmail.com
+    [contrasena] => 123456789
+)
+
+DEBUG - 2025-05-15 13:20:30 --> Datos POST confirmados
+ERROR - 2025-05-15 13:20:30 --> mysqli_sql_exception: Unknown column 'contraseña_hash' in 'field list' in G:\xampp\htdocs\framework-ci4\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 G:\xampp\htdocs\framework-ci4\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `us...', 0)
+#1 G:\xampp\htdocs\framework-ci4\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 G:\xampp\htdocs\framework-ci4\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 G:\xampp\htdocs\framework-ci4\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 G:\xampp\htdocs\framework-ci4\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 G:\xampp\htdocs\framework-ci4\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 G:\xampp\htdocs\framework-ci4\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, false)
+#7 G:\xampp\htdocs\framework-ci4\system\BaseModel.php(750): CodeIgniter\Model->insert(Array, false)
+#8 G:\xampp\htdocs\framework-ci4\app\Controllers\SignupController.php(54): CodeIgniter\BaseModel->save(Array)
+#9 G:\xampp\htdocs\framework-ci4\system\CodeIgniter.php(933): App\Controllers\SignupController->store()
+#10 G:\xampp\htdocs\framework-ci4\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+#11 G:\xampp\htdocs\framework-ci4\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 G:\xampp\htdocs\framework-ci4\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 G:\xampp\htdocs\framework-ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 G:\xampp\htdocs\framework-ci4\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-05-15 13:20:30 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'contraseña_hash' in 'field list'
+[Method: POST, Route: register]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (:correo:, :contraseña_hash:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\SignupController.php(54): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SignupController->store()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-15 13:20:30 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'contraseña_hash' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (\'alf@gmail.com\', \'$2y$10$ztVO3z1NiGLwAW3hXcstuO1QVVaxhF00CGNVwIi1pioyzy5oIMXmq\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (\'alf@gmail.com\', \'$2y$10$ztVO3z1NiGLwAW3hXcstuO1QVVaxhF00CGNVwIi1pioyzy5oIMXmq\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (:correo:, :contraseña_hash:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\SignupController.php(54): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SignupController->store()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-15 13:20:30 --> [Caused by] mysqli_sql_exception: Unknown column 'contraseña_hash' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (\'alf@gmail.com\', \'$2y$10$ztVO3z1NiGLwAW3hXcstuO1QVVaxhF00CGNVwIi1pioyzy5oIMXmq\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (\'alf@gmail.com\', \'$2y$10$ztVO3z1NiGLwAW3hXcstuO1QVVaxhF00CGNVwIi1pioyzy5oIMXmq\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (\'alf@gmail.com\', \'$2y$10$ztVO3z1NiGLwAW3hXcstuO1QVVaxhF00CGNVwIi1pioyzy5oIMXmq\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `usuario` (`correo`, `contraseña_hash`) VALUES (:correo:, :contraseña_hash:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\SignupController.php(54): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\SignupController->store()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-15 13:56:44 --> Accediendo a SignupController::index
+DEBUG - 2025-05-15 13:56:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 13:56:50 --> Accediendo a Home::index
+DEBUG - 2025-05-15 13:56:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-15 13:56:50 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "home/index.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('home/index.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('home/index', [], true)
+ 3 APPPATH\Controllers\Home.php(13): view('home/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-15 13:57:07 --> Accediendo a SignupController::index
+DEBUG - 2025-05-15 13:57:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 13:57:09 --> Accediendo a Auth::login
+DEBUG - 2025-05-15 13:57:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 13:57:18 --> Accediendo a Auth::attemptLogin
+DEBUG - 2025-05-15 13:57:18 --> Datos recibidos: correo=2@2.com, password=provided
+DEBUG - 2025-05-15 13:57:18 --> Resultado de la consulta: user={"id":"3","nombre":"222","apellido":"222","correo":"2@2.com","contrasena":"$2y$10$WhHLBO.KRzYAsUPmVTiqGOGfsMtUga0Td\/.oemAV6U6BbjijMigQK","fecha_creacion":"2025-05-13 21:55:24"}
+DEBUG - 2025-05-15 13:57:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 13:57:18 --> Inicio de sesión exitoso para: 2@2.com
+DEBUG - 2025-05-15 13:57:18 --> Redirigiendo a: profile (URL completa: http://localhost/framework-ci4/index.php/profile)
+DEBUG - 2025-05-15 13:57:18 --> Accediendo a UserController::profile
+DEBUG - 2025-05-15 13:57:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 13:57:22 --> Accediendo a Auth::logout
+DEBUG - 2025-05-15 13:57:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 13:57:22 --> Accediendo a Auth::login
+DEBUG - 2025-05-15 13:57:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 13:57:27 --> Accediendo a Home::index
+DEBUG - 2025-05-15 13:57:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-15 13:57:27 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "home/index.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('home/index.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('home/index', [], true)
+ 3 APPPATH\Controllers\Home.php(13): view('home/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-15 13:57:42 --> Accediendo a UserController::profile
+DEBUG - 2025-05-15 13:57:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 13:57:42 --> Usuario no logueado, redirigiendo a login
+DEBUG - 2025-05-15 13:57:42 --> Accediendo a Auth::login
+DEBUG - 2025-05-15 13:57:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 14:35:04 --> Accediendo a Auth::login
+DEBUG - 2025-05-15 14:35:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 14:35:10 --> Accediendo a Auth::login
+DEBUG - 2025-05-15 14:35:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 14:35:14 --> Accediendo a SignupController::index
+DEBUG - 2025-05-15 14:35:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 14:35:38 --> Accediendo a SignupController::store
+DEBUG - 2025-05-15 14:35:38 --> Método HTTP detectado: POST
+DEBUG - 2025-05-15 14:35:38 --> Datos recibidos: Array
+(
+    [nombre] => Alfredo
+    [apellido] => Galvan
+    [correo] => alf@gmail.com
+    [contrasena] => 123456789
+)
+
+DEBUG - 2025-05-15 14:35:38 --> Datos POST confirmados
+DEBUG - 2025-05-15 14:35:38 --> Usuario guardado exitosamente: alf@gmail.com
+DEBUG - 2025-05-15 14:35:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 14:35:38 --> Accediendo a Auth::login
+DEBUG - 2025-05-15 14:35:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 14:35:53 --> Accediendo a Auth::attemptLogin
+DEBUG - 2025-05-15 14:35:53 --> Datos recibidos: correo=alf@gmail.com, password=provided
+DEBUG - 2025-05-15 14:35:53 --> Resultado de la consulta: user={"id":"4","nombre":"Alfredo","apellido":"Galvan","correo":"alf@gmail.com","contrasena":"","fecha_creacion":"2025-05-15 11:35:38"}
+ERROR - 2025-05-15 14:35:53 --> Contraseña incorrecta para: alf@gmail.com
+DEBUG - 2025-05-15 14:35:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 14:35:53 --> Accediendo a Auth::login
+DEBUG - 2025-05-15 14:35:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 14:41:00 --> Accediendo a Auth::login
+DEBUG - 2025-05-15 14:41:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 14:41:54 --> Accediendo a SignupController::index
+DEBUG - 2025-05-15 14:41:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 14:42:13 --> Accediendo a SignupController::store
+DEBUG - 2025-05-15 14:42:13 --> Método HTTP detectado: POST
+DEBUG - 2025-05-15 14:42:13 --> Datos recibidos: Array
+(
+    [nombre] => zzz
+    [apellido] => zzz
+    [correo] => z@z.com
+    [contrasena] => 123456789
+)
+
+DEBUG - 2025-05-15 14:42:13 --> Datos POST confirmados
+DEBUG - 2025-05-15 14:42:13 --> Usuario guardado exitosamente: z@z.com
+DEBUG - 2025-05-15 14:42:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 14:42:14 --> Accediendo a Auth::login
+DEBUG - 2025-05-15 14:42:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 14:42:57 --> Accediendo a SignupController::index
+DEBUG - 2025-05-15 14:42:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 14:43:24 --> Accediendo a SignupController::store
+DEBUG - 2025-05-15 14:43:24 --> Método HTTP detectado: POST
+DEBUG - 2025-05-15 14:43:24 --> Datos recibidos: Array
+(
+    [nombre] => Alfredo
+    [apellido] => Galván
+    [correo] => alf@gmail.com
+    [contrasena] => 123456789
+)
+
+DEBUG - 2025-05-15 14:43:24 --> Datos POST confirmados
+DEBUG - 2025-05-15 14:43:24 --> Usuario guardado exitosamente: alf@gmail.com
+DEBUG - 2025-05-15 14:43:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 14:43:24 --> Accediendo a Auth::login
+DEBUG - 2025-05-15 14:43:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 14:43:32 --> Accediendo a Auth::attemptLogin
+DEBUG - 2025-05-15 14:43:32 --> Datos recibidos: correo=alf@gmail.com, password=provided
+DEBUG - 2025-05-15 14:43:32 --> Resultado de la consulta: user={"id":"6","nombre":"Alfredo","apellido":"Galv\u00e1n","correo":"alf@gmail.com","contrasena":"$2y$10$\/4SKcsVpakxam5Stvk2ove\/5HMQ51c1DguuyCKLbUHfxNzXzjncY6","fecha_creacion":"2025-05-15 11:43:24"}
+DEBUG - 2025-05-15 14:43:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 14:43:33 --> Inicio de sesión exitoso para: alf@gmail.com
+DEBUG - 2025-05-15 14:43:33 --> Redirigiendo a: profile (URL completa: http://localhost/framework-ci4/index.php/profile)
+DEBUG - 2025-05-15 14:43:33 --> Accediendo a UserController::profile
+DEBUG - 2025-05-15 14:43:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 14:44:10 --> Accediendo a Tasks::index
+DEBUG - 2025-05-15 14:44:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 14:44:10 --> User ID en sesión: 6
+DEBUG - 2025-05-15 14:44:10 --> Correo logueado: alf@gmail.com
+DEBUG - 2025-05-15 14:44:10 --> Tareas propias encontradas: 0
+DEBUG - 2025-05-15 14:44:10 --> Correo en sesión: alf@gmail.com
+DEBUG - 2025-05-15 14:44:10 --> Tareas compartidas encontradas: 0
+DEBUG - 2025-05-15 14:44:10 --> Total de tareas combinadas: 0
+DEBUG - 2025-05-15 14:44:15 --> Accediendo a Tasks::create
+DEBUG - 2025-05-15 14:44:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 14:44:30 --> Accediendo a Tasks::store
+DEBUG - 2025-05-15 14:44:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 14:44:30 --> Datos de tarea: Array
+(
+    [user_id] => 6
+    [title] => LaPrimera
+    [description] => 1111111111
+    [priority] => low
+    [status] => pending
+    [due_date] => 
+    [is_archived] => 0
+)
+
+DEBUG - 2025-05-15 14:44:30 --> Tarea guardada exitosamente
+DEBUG - 2025-05-15 14:44:31 --> Accediendo a Tasks::index
+DEBUG - 2025-05-15 14:44:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 14:44:31 --> User ID en sesión: 6
+DEBUG - 2025-05-15 14:44:31 --> Correo logueado: alf@gmail.com
+DEBUG - 2025-05-15 14:44:31 --> Tareas propias encontradas: 1
+DEBUG - 2025-05-15 14:44:31 --> Correo en sesión: alf@gmail.com
+DEBUG - 2025-05-15 14:44:31 --> Tareas compartidas encontradas: 0
+DEBUG - 2025-05-15 14:44:31 --> Total de tareas combinadas: 1
+DEBUG - 2025-05-15 18:45:21 --> Accediendo a Home::index
+DEBUG - 2025-05-15 18:45:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-15 18:45:22 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "home/index.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('home/index.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('home/index', [], true)
+ 3 APPPATH\Controllers\Home.php(13): view('home/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-15 19:15:50 --> Accediendo a Tasks::create
+DEBUG - 2025-05-15 19:15:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-15 19:15:51 --> No hay usuario logueado
+DEBUG - 2025-05-15 19:15:52 --> Accediendo a Tasks::create
+DEBUG - 2025-05-15 19:15:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-05-15 19:15:52 --> No hay usuario logueado
+DEBUG - 2025-05-15 19:15:52 --> Accediendo a Auth::login
+DEBUG - 2025-05-15 19:15:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 19:16:04 --> Accediendo a Auth::attemptLogin
+DEBUG - 2025-05-15 19:16:04 --> Datos recibidos: correo=alf@gmail.com, password=provided
+DEBUG - 2025-05-15 19:16:04 --> Resultado de la consulta: user={"id":"6","nombre":"Alfredo","apellido":"Galv\u00e1n","correo":"alf@gmail.com","contrasena":"$2y$10$\/4SKcsVpakxam5Stvk2ove\/5HMQ51c1DguuyCKLbUHfxNzXzjncY6","fecha_creacion":"2025-05-15 11:43:24"}
+DEBUG - 2025-05-15 19:16:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 19:16:04 --> Inicio de sesión exitoso para: alf@gmail.com
+DEBUG - 2025-05-15 19:16:04 --> Redirigiendo a: profile (URL completa: http://localhost/framework-ci4/index.php/profile)
+DEBUG - 2025-05-15 19:16:04 --> Accediendo a UserController::profile
+DEBUG - 2025-05-15 19:16:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 19:16:07 --> Accediendo a Tasks::create
+DEBUG - 2025-05-15 19:16:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 19:16:31 --> Accediendo a Tasks::store
+DEBUG - 2025-05-15 19:16:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 19:16:31 --> Datos de tarea: Array
+(
+    [user_id] => 6
+    [title] => angang
+    [description] => angng
+    [priority] => low
+    [status] => pending
+    [due_date] => 
+    [is_archived] => 0
+)
+
+DEBUG - 2025-05-15 19:16:31 --> Tarea guardada exitosamente
+DEBUG - 2025-05-15 19:16:31 --> Accediendo a Tasks::index
+DEBUG - 2025-05-15 19:16:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 19:16:31 --> User ID en sesión: 6
+DEBUG - 2025-05-15 19:16:31 --> Correo logueado: alf@gmail.com
+DEBUG - 2025-05-15 19:16:31 --> Tareas propias encontradas: 2
+DEBUG - 2025-05-15 19:16:31 --> Correo en sesión: alf@gmail.com
+DEBUG - 2025-05-15 19:16:31 --> Tareas compartidas encontradas: 0
+DEBUG - 2025-05-15 19:16:31 --> Total de tareas combinadas: 2
+DEBUG - 2025-05-15 19:16:44 --> Accediendo a Tasks::delete, id: 23
+DEBUG - 2025-05-15 19:16:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 19:16:44 --> Tarea eliminada exitosamente, id: 23
+DEBUG - 2025-05-15 19:16:44 --> Accediendo a Tasks::index
+DEBUG - 2025-05-15 19:16:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 19:16:44 --> User ID en sesión: 6
+DEBUG - 2025-05-15 19:16:44 --> Correo logueado: alf@gmail.com
+DEBUG - 2025-05-15 19:16:44 --> Tareas propias encontradas: 1
+DEBUG - 2025-05-15 19:16:44 --> Correo en sesión: alf@gmail.com
+DEBUG - 2025-05-15 19:16:44 --> Tareas compartidas encontradas: 0
+DEBUG - 2025-05-15 19:16:44 --> Total de tareas combinadas: 1
+DEBUG - 2025-05-15 19:16:48 --> Accediendo a Tasks::archived
+DEBUG - 2025-05-15 19:16:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 19:16:48 --> User ID en sesión: 6
+DEBUG - 2025-05-15 19:16:48 --> Correo logueado: alf@gmail.com
+DEBUG - 2025-05-15 19:16:48 --> Tareas propias archivadas encontradas: 0
+DEBUG - 2025-05-15 19:16:48 --> Correo en sesión: alf@gmail.com
+DEBUG - 2025-05-15 19:16:48 --> Tareas compartidas archivadas encontradas: 0
+DEBUG - 2025-05-15 19:16:48 --> Total de tareas archivadas combinadas: 0
+DEBUG - 2025-05-15 23:19:41 --> Accediendo a Home::index
+DEBUG - 2025-05-15 23:19:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-15 23:19:42 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "home/index.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('home/index.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('home/index', [], true)
+ 3 APPPATH\Controllers\Home.php(13): view('home/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-15 23:19:50 --> Accediendo a Auth::login
+DEBUG - 2025-05-15 23:19:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-15 23:29:47 --> Accediendo a Home::index
+DEBUG - 2025-05-15 23:29:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-15 23:29:47 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "home/index.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('home/index.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('home/index', [], true)
+ 3 APPPATH\Controllers\Home.php(13): view('home/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-15 23:31:10 --> Accediendo a Home::index
+DEBUG - 2025-05-15 23:31:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-15 23:31:10 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "home/index.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('home/index.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('home/index', [], true)
+ 3 APPPATH\Controllers\Home.php(13): view('home/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-15 23:40:32 --> Accediendo a Home::index
+DEBUG - 2025-05-15 23:40:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-15 23:40:32 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "home/index.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('home/index.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('home/index', [], true)
+ 3 APPPATH\Controllers\Home.php(13): view('home/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-15 23:45:55 --> Accediendo a Home::index
+DEBUG - 2025-05-15 23:45:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-15 23:45:56 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "home/index.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('home/index.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('home/index', [], true)
+ 3 APPPATH\Controllers\Home.php(13): view('home/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

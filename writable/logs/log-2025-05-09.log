@@ -1,0 +1,83 @@
+DEBUG - 2025-05-09 00:15:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-09 00:15:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-09 00:15:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-09 21:31:27 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Hola, soy el controlador Home
+        <br>Hola, estoy usando el METODO: public function index(): string.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Hola, soy el controlador Home
+        <br>Hola, estoy usando el METODO: public function index(): string.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('Hola, soy el controlador Home
+        <br>Hola, estoy usando el METODO: public function index(): string', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('Hola, soy el controlador Home
+        <br>Hola, estoy usando el METODO: public function index(): string')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-09 21:31:38 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Hola, soy el controlador Home
+        <br>Hola, estoy usando el METODO: public function index(): string.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Hola, soy el controlador Home
+        <br>Hola, estoy usando el METODO: public function index(): string.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('Hola, soy el controlador Home
+        <br>Hola, estoy usando el METODO: public function index(): string', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('Hola, soy el controlador Home
+        <br>Hola, estoy usando el METODO: public function index(): string')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-09 21:32:12 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Hola, soy el controlador Home<br>Hola, estoy usando el METODO: public function index(): string.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Hola, soy el controlador Home<br>Hola, estoy usando el METODO: public function index(): string.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('Hola, soy el controlador Home<br>Hola, estoy usando el METODO: public function index(): string', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('Hola, soy el controlador Home<br>Hola, estoy usando el METODO: public function index(): string')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-09 21:32:13 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Hola, soy el controlador Home<br>Hola, estoy usando el METODO: public function index(): string.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Hola, soy el controlador Home<br>Hola, estoy usando el METODO: public function index(): string.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('Hola, soy el controlador Home<br>Hola, estoy usando el METODO: public function index(): string', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('Hola, soy el controlador Home<br>Hola, estoy usando el METODO: public function index(): string')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-09 21:35:13 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "index.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('index', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('index')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-09 22:20:42 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "articulos/index.php"
+[Method: GET, Route: articulos]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('articulos/index.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('articulos/index', [], true)
+ 3 APPPATH\Controllers\articulos.php(10): view('articulos/index')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Articulos->getIndex()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Articulos))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

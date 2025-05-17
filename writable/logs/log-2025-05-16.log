@@ -1,0 +1,140 @@
+DEBUG - 2025-05-16 00:09:51 --> Accediendo a Home::index
+DEBUG - 2025-05-16 00:09:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-16 00:09:51 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "home/index.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('home/index.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('home/index', [], true)
+ 3 APPPATH\Controllers\Home.php(13): view('home/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-16 00:09:53 --> Accediendo a Home::index
+DEBUG - 2025-05-16 00:09:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-16 00:09:53 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "home/index.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('home/index.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('home/index', [], true)
+ 3 APPPATH\Controllers\Home.php(13): view('home/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-16 00:10:00 --> Accediendo a Auth::login
+DEBUG - 2025-05-16 00:10:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-16 09:06:22 --> Accediendo a Home::index
+DEBUG - 2025-05-16 09:06:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-16 09:06:23 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "home/index.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('home/index.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('home/index', [], true)
+ 3 APPPATH\Controllers\Home.php(13): view('home/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-16 09:10:34 --> Accediendo a Auth::login
+DEBUG - 2025-05-16 09:10:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-16 09:10:45 --> Accediendo a Auth::attemptLogin
+DEBUG - 2025-05-16 09:10:45 --> Datos recibidos: correo=alf@gmail.com, password=provided
+DEBUG - 2025-05-16 09:10:45 --> Resultado de la consulta: user={"id":"6","nombre":"Alfredo","apellido":"Galv\u00e1n","correo":"alf@gmail.com","contrasena":"$2y$10$\/4SKcsVpakxam5Stvk2ove\/5HMQ51c1DguuyCKLbUHfxNzXzjncY6","fecha_creacion":"2025-05-15 11:43:24"}
+DEBUG - 2025-05-16 09:10:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-16 09:10:45 --> Inicio de sesión exitoso para: alf@gmail.com
+DEBUG - 2025-05-16 09:10:45 --> Redirigiendo a: profile (URL completa: http://localhost/framework-ci4/index.php/profile)
+DEBUG - 2025-05-16 09:10:45 --> Accediendo a UserController::profile
+DEBUG - 2025-05-16 09:10:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-16 09:10:55 --> Accediendo a Tasks::index
+DEBUG - 2025-05-16 09:10:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-16 09:10:55 --> User ID en sesión: 6
+DEBUG - 2025-05-16 09:10:55 --> Correo logueado: alf@gmail.com
+DEBUG - 2025-05-16 09:10:55 --> Tareas propias encontradas: 1
+DEBUG - 2025-05-16 09:10:55 --> Correo en sesión: alf@gmail.com
+DEBUG - 2025-05-16 09:10:55 --> Tareas compartidas encontradas: 0
+DEBUG - 2025-05-16 09:10:55 --> Total de tareas combinadas: 1
+DEBUG - 2025-05-16 09:11:18 --> Accediendo a Tasks::addSubtask, task_id: 22
+DEBUG - 2025-05-16 09:11:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-16 09:11:18 --> Subtarea añadida exitosamente, task_id: 22
+DEBUG - 2025-05-16 09:11:19 --> Accediendo a Tasks::index
+DEBUG - 2025-05-16 09:11:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-16 09:11:19 --> User ID en sesión: 6
+DEBUG - 2025-05-16 09:11:19 --> Correo logueado: alf@gmail.com
+DEBUG - 2025-05-16 09:11:19 --> Tareas propias encontradas: 1
+DEBUG - 2025-05-16 09:11:19 --> Correo en sesión: alf@gmail.com
+DEBUG - 2025-05-16 09:11:19 --> Tareas compartidas encontradas: 0
+DEBUG - 2025-05-16 09:11:19 --> Total de tareas combinadas: 1
+DEBUG - 2025-05-16 09:11:22 --> Accediendo a Tasks::toggleSubtask, subtask_id: 18
+DEBUG - 2025-05-16 09:11:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-16 09:11:22 --> Estado de subtarea antes de actualizar, subtask_id: 18, is_completed: 0
+DEBUG - 2025-05-16 09:11:22 --> Estado de tarea, task_id: 22, status: pending
+DEBUG - 2025-05-16 09:11:22 --> Subtarea actualizada exitosamente, id: 18, is_completed: 1
+DEBUG - 2025-05-16 09:11:22 --> Tarea actualizada a in_progress, task_id: 22, consulta: UPDATE `tasks` SET `status` = 'in_progress', `updated_at` = '2025-05-16 09:11:22'
+WHERE `tasks`.`id` IN ('22')
+DEBUG - 2025-05-16 09:11:22 --> Accediendo a Tasks::index
+DEBUG - 2025-05-16 09:11:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-16 09:11:22 --> User ID en sesión: 6
+DEBUG - 2025-05-16 09:11:22 --> Correo logueado: alf@gmail.com
+DEBUG - 2025-05-16 09:11:22 --> Tareas propias encontradas: 1
+DEBUG - 2025-05-16 09:11:22 --> Correo en sesión: alf@gmail.com
+DEBUG - 2025-05-16 09:11:22 --> Tareas compartidas encontradas: 0
+DEBUG - 2025-05-16 09:11:22 --> Total de tareas combinadas: 1
+DEBUG - 2025-05-16 09:11:54 --> Accediendo a Tasks::create
+DEBUG - 2025-05-16 09:11:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-16 09:12:26 --> Accediendo a Tasks::index
+DEBUG - 2025-05-16 09:12:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-16 09:12:26 --> User ID en sesión: 6
+DEBUG - 2025-05-16 09:12:26 --> Correo logueado: alf@gmail.com
+DEBUG - 2025-05-16 09:12:26 --> Tareas propias encontradas: 1
+DEBUG - 2025-05-16 09:12:26 --> Correo en sesión: alf@gmail.com
+DEBUG - 2025-05-16 09:12:26 --> Tareas compartidas encontradas: 0
+DEBUG - 2025-05-16 09:12:26 --> Total de tareas combinadas: 1
+DEBUG - 2025-05-16 09:19:25 --> Accediendo a Tasks::archived
+DEBUG - 2025-05-16 09:19:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-16 09:19:26 --> User ID en sesión: 6
+DEBUG - 2025-05-16 09:19:26 --> Correo logueado: alf@gmail.com
+DEBUG - 2025-05-16 09:19:26 --> Tareas propias archivadas encontradas: 0
+DEBUG - 2025-05-16 09:19:26 --> Correo en sesión: alf@gmail.com
+DEBUG - 2025-05-16 09:19:26 --> Tareas compartidas archivadas encontradas: 0
+DEBUG - 2025-05-16 09:19:26 --> Total de tareas archivadas combinadas: 0
+DEBUG - 2025-05-16 13:39:55 --> Accediendo a Tasks::index
+DEBUG - 2025-05-16 13:39:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-16 13:39:55 --> User ID en sesión: null
+ERROR - 2025-05-16 13:39:55 --> No hay usuario logueado
+DEBUG - 2025-05-16 13:39:55 --> Accediendo a Auth::login
+DEBUG - 2025-05-16 13:39:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-05-16 15:44:22 --> Accediendo a Home::index
+DEBUG - 2025-05-16 15:44:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-16 15:44:22 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "home/index.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('home/index.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('home/index', [], true)
+ 3 APPPATH\Controllers\Home.php(13): view('home/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-05-16 15:45:06 --> Accediendo a Home::index
+DEBUG - 2025-05-16 15:45:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-05-16 15:45:06 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "home/index.php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('home/index.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('home/index', [], true)
+ 3 APPPATH\Controllers\Home.php(13): view('home/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

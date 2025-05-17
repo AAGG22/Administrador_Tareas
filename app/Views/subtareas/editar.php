@@ -1,0 +1,1 @@
+<h2>Editar Subtarea</h2><form method='post' action='/subtareas/actualizar/<?= $subtarea['id_subtarea'] ?>'>...</form>
